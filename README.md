@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1442" height="1382" alt="Capstone kelompok 18 NEW-Use Case" src="https://github.com/user-attachments/assets/96729c69-dba9-43ba-acca-5622fd9a7f63" /><div align="center">
 
 # ── ⟡ ˙🌱 ̟  AGROVA  ˙🌱 ̟  ⟡ ──
 
@@ -102,7 +102,7 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 ## ── ⟡ Perancangan Sistem
 
 ### ˙🌱 ̟  Flowchart
-<!-- TODO: simpan gambar flowchart di docs/images/flowchart/ lalu sesuaikan nama file -->
+Berikut ini merupakan beberapa menu flowchart atau diagram alur yang dibuat dalam perancangan AGROVA.
 
 <details>
 <summary>1. Flowchart Menu Utama</summary>
@@ -149,12 +149,11 @@ Sistem AGROVA memiliki tiga aktor utama di dalamnya yaitu **Pengelola**, **Penya
 
 <details>
 <summary>Use Case Diagram AGROVA</summary>
-<!-- TODO: docs/images/usecase.png -->
-<img src="docs/images/usecase.png" alt="Use Case Diagram AGROVA" width="800">
+<img width="1442" height="1382" alt="Capstone kelompok 18 NEW-Use Case" src="https://github.com/user-attachments/assets/d6596696-131b-476b-bacb-0ce63b877623" />
 </details>
 
 ### ˙🌱 ̟  ERD
-Pupuk dan pengguna dimodelkan dengan pola *supertype–subtype*: `pupuk` dibagi menjadi `subsidi` dan `non_subsidi`, sedangkan `user` dibagi menjadi `pengelola`, `penyalur`, dan `petani`.
+Entitas `pupuk` dan `user` dimodelkan dengan pola *supertype–subtype*. Entitas`pupuk` dibagi menjadi `subsidi` dan `non_subsidi`, sedangkan `user` dibagi menjadi `pengelola`, `penyalur`, dan `petani`.
 
 <details>
 <summary>ERD Logical</summary>
