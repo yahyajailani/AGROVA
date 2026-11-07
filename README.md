@@ -580,88 +580,267 @@ Berikut ini ialah alur penggunaan program dari AGROVA.
 ### ˙🌱 ̟  Beranda 
 Pada bagian ini, akan dilampirkan tampilan dari Beranda AGROVA. Dalam bagian ini terdapat 3 button pilihan di atasnya yaitu Beranda, Tentang Kami, dan Rekomendasi. Berikut ini ialah lampiran gambar dari masing-masing button tersebut.
 
-- Beranda
+<details>
+<summary>Beranda</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13" src="https://github.com/user-attachments/assets/af6846f4-b0a1-4e75-aefc-4b9335ef5e07" />
+
 Tampilan di atas merupakan tampilan pertama yang akan dilihat oleh para pengunjung ataupun pengguna AGROVA. Pada halaman ini, berisikan informasi terkait Distribusi Pupuk.
 
-- Tentang Kami
+</details>
+
+<details>
+<summary>Tentang Kami</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (1)" src="https://github.com/user-attachments/assets/3544d8f1-6876-49a9-ad3c-322884428fbb" />
+
 Pada halaman ini, terdapat berbagai informasi lanjutan mengenai Perusahaan ROOT dan sistem AGROVA. Serta fokus SDGs dari Perusahaan ROOT dan cara kerja distribusi dari Perusahaan ROOT hingga sampai ke tangan petani.
 
-- Rekomendasi
+</details>
+
+<details>
+<summary>Rekomendasi</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (2)" src="https://github.com/user-attachments/assets/54b5db2d-3363-43fa-960f-9fc43c84f1a0" />
+
 Pada halaman ini, terdapat informasi mengenai jenis pupuk yang paling banyak dialokasikan dan sebuah sistem yang akan merekomendasikan jenis pupuk terbaik untuk tanaman yang kita pilih.
 
-- Daftar
+</details>
+
+<details>
+<summary>Daftar</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49" src="https://github.com/user-attachments/assets/77b286c0-821f-419d-b4e0-e9aea4df1da7" />
+
 Lalu pada button yang terletak di pojok kanan atas, terdapat pilihan untuk Daftar dan Login. Para pengunjung yang belum terdaftar dapat memilih untuk mendaftar sebagai Penyalur atau Petani. Pada gambar di atas, terdapat tampilan dari halaman Daftar bagi Petani.
 
-- Login
+</details>
+
+<details>
+<summary>Login</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49 (1)" src="https://github.com/user-attachments/assets/50894c78-9391-40c7-88ec-db2971a66c66" />
+
 Jika sudah memiliki akun, maka pengguna dapat langsung memilih button Login. Gambar di atas merupakan tampilan dari halaman Login.
 
-### ˙🌱 ̟  Menu Pengelola
-Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu pengelola. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
+</details>
 
-- Dashboard
+### ˙🌱 ̟  Menu Pengelola
+Menu Pengelola digunakan oleh pihak Perusahaan Root untuk mengatur distribusi pupuk dari gudang pusat. Lewat menu ini, Pengelola mengirim pupuk ke kecamatan, menetapkan kuota pupuk subsidi, melihat data petani dan penyalur, serta memantau laporan penyaluran. Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu pengelola. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
+
+<details>
+<summary>Dashboard</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 25" src="https://github.com/user-attachments/assets/63bf925f-8875-4c14-94ae-db39ec629923" />
 
-- Penyaluran
+Dashboard merupakan halaman pertama yang tampil setelah Pengelola berhasil login. Pada halaman ini, terdapat ringkasan penyaluran hari ini dan bulan ini, jumlah petani penerima subsidi, pengiriman yang menunggu konfirmasi, total stok gudang, serta jumlah petani terdaftar. Terdapat pula grafik pupuk yang paling banyak didistribusikan per kecamatan dan ringkasan gudang beserta kuotanya.
+
+</details>
+
+<details>
+<summary>Penyaluran</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 25 (1)" src="https://github.com/user-attachments/assets/9f78c9ce-feca-442c-8303-eb7bd0147e2c" />
 
-- Pupuk Subsidi
+Pada halaman ini, Pengelola dapat mengirim pupuk dari gudang ke kecamatan tujuan dengan memilih produk, kecamatan tujuan, dan jumlah (kg), lalu menekan tombol Kirim ke penyalur. Data yang sudah tercatat tampil pada daftar penyaluran dan dapat diubah atau dihapus.
+
+</details>
+
+<details>
+<summary>Pupuk Subsidi</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 25 (2)" src="https://github.com/user-attachments/assets/0d2f7e5d-b2b2-4c6d-a28d-c2759be2da9f" />
 
-- Lihat Data
+Pada halaman ini, Pengelola dapat menetapkan kuota pupuk subsidi berdasarkan kecamatan, produk, dan tahun. Terdapat pula bagian untuk melihat kuota kecamatan, data petani subsidi, penyaluran ke petani, dan pemantauan kuota per kecamatan untuk mengetahui jumlah kuota yang sudah terpakai dan sisanya. Penyaluran tidak dapat melebihi kuota yang telah ditetapkan.
+
+</details>
+
+<details>
+<summary>Lihat Data</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 26" src="https://github.com/user-attachments/assets/29b84b70-5112-4bf5-a5ac-068ce6c97b99" />
 
-- Laporan
+Pada halaman ini, Pengelola dapat melihat data petani, data penyalur, dan ketersediaan pupuk. Seluruh data bersifat hanya baca dan dapat dicari menggunakan kolom pencarian yang tersedia.
+
+</details>
+
+<details>
+<summary>Laporan</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 36" src="https://github.com/user-attachments/assets/d4686011-95ae-4af7-8595-8b5ec10bd49e" />
 
-- Profil
+Pada halaman ini, Pengelola dapat membuat rekap penyaluran pada periode tertentu. Pengelola mengisi filter tanggal awal dan tanggal akhir yang dipilih lewat kalender, lalu memilih produk dan kecamatan. Setelah menekan tombol Tampilkan, hasil laporan akan muncul pada tabel di bawahnya.
+
+</details>
+
+<details>
+<summary>Profil</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 57" src="https://github.com/user-attachments/assets/6a7621c5-7825-481e-b850-f4b5ecc4cfe7" />
 
-### ˙🌱 ̟  Menu Penyalur
-Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu penyalur. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
+Pada halaman ini, Pengelola dapat melihat data akun miliknya, yaitu nama pengguna, email, dan nomor telepon, beserta detail lain sesuai perannya seperti jabatan dan NIP.
 
-- Beranda
+</details>
+
+### ˙🌱 ̟  Menu Penyalur
+Menu Penyalur digunakan oleh kios di tiap kecamatan sebagai penghubung antara gudang dan petani. Lewat menu ini, Penyalur menerima kiriman dari gudang, memproses pesanan petani, menyalurkan pupuk langsung berdasarkan NIK, memantau stok kios, dan mencetak bukti penyaluran. Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu penyalur. Berikut ini ialah lampiran gambar yang berada di Menu Penyalur ini.
+
+<details>
+<summary>Beranda</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 08" src="https://github.com/user-attachments/assets/8bb34e06-c22d-41ee-b018-416c036de82c" />
 
-- Verifikasi
+Beranda Penyalur merupakan halaman pertama yang tampil setelah Penyalur berhasil login. Pada halaman ini, terdapat ringkasan stok kecamatan, jumlah pengiriman masuk yang menunggu konfirmasi, jumlah pesanan petani yang menunggu disetujui, dan jumlah pupuk yang tersalur bulan ini, serta notifikasi terbaru.
+
+</details>
+
+<details>
+<summary>Verifikasi</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 09" src="https://github.com/user-attachments/assets/d64e635b-5e9c-45e7-b944-a405953cdf1d" />
 
-- Salurkan
+Pada halaman ini, Penyalur dapat menerima atau menolak kiriman pupuk dari gudang, serta menerima atau menolak pesanan petani yang masuk. Pesanan yang diterima akan memotong stok kios, sedangkan pesanan yang ditolak tidak mengurangi stok.
+
+</details>
+
+<details>
+<summary>Salurkan</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 09 (1)" src="https://github.com/user-attachments/assets/ef84ee79-47c0-45d2-a064-0a6a0d09807a" />
 
-- Stok
+Pada halaman ini, Penyalur dapat menyerahkan pupuk langsung kepada petani. Penyalur cukup mengisi NIK petani (16 digit), lalu memilih produk dan jumlah (kg). Tombol Cek kuota menampilkan kuota petani, dan sistem hanya memperbolehkan pupuk yang sesuai dengan hak petani tersebut.
+
+</details>
+
+<details>
+<summary>Stok</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 21" src="https://github.com/user-attachments/assets/af187a27-0051-40c5-a3eb-e96f58426a88" />
 
-- Riwayat
+Pada halaman ini, Penyalur dapat memantau stok kios, yaitu jumlah pupuk yang diterima, terjual, dipesan, dan sisa yang masih tersedia untuk setiap produk.
+
+</details>
+
+<details>
+<summary>Riwayat</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 22" src="https://github.com/user-attachments/assets/712a001d-15be-4b6c-a897-19288b3b3e8f" />
 
-- Profil
+Pada halaman ini, Penyalur dapat melihat riwayat transaksi di kiosnya. Penyalur memilih satu baris data, lalu menekan tombol Cetak Bukti Penyaluran untuk menyimpan bukti tersebut sebagai PDF.
+
+</details>
+
+<details>
+<summary>Profil</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 22 (1)" src="https://github.com/user-attachments/assets/44aa932d-275d-4e0c-8cec-600d75787cc6" />
 
-### ˙🌱 ̟  Menu Petani
-Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu petani. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
+Pada halaman ini, Penyalur dapat melihat data akun miliknya, yaitu nama pengguna, email, dan nomor telepon, beserta detail kios seperti nomor izin usaha dan kecamatan layanan.
 
-- Beranda
+</details>
+
+### ˙🌱 ̟  Menu Petani
+Menu Petani digunakan oleh petani untuk memperoleh pupuk sesuai haknya. Lewat menu ini, Petani melihat pupuk yang tersedia di kiosnya, memesan pupuk sesuai kuota, memantau status pesanan, dan melihat riwayat pupuk yang sudah diterima. Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu petani. Berikut ini ialah lampiran gambar yang berada di Menu Petani ini.
+
+<details>
+<summary>Beranda</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 34" src="https://github.com/user-attachments/assets/9fb8a90f-6a3f-4d79-8fe7-aa51e67de76a" />
 
-- Produk
+Beranda Petani merupakan halaman pertama yang tampil setelah Petani berhasil login. Pada halaman ini, terdapat kuota pupuk subsidi pada musim ini, sisa kuota, dan jumlah pesanan yang masih aktif, serta tabel Kuota saya yang memuat rincian kuota setiap produk.
+
+</details>
+
+<details>
+<summary>Produk</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 36" src="https://github.com/user-attachments/assets/edc5ea8f-34fd-48cb-8a07-6f460adbf5a0" />
 
-- Pesan
+Pada halaman ini, Petani dapat melihat daftar pupuk yang tersedia di kios pada kecamatannya. Petani Golongan A hanya melihat pupuk nonsubsidi.
+
+</details>
+
+<details>
+<summary>Pesan</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37" src="https://github.com/user-attachments/assets/6ca600d1-1fe0-4d39-b533-799d789186cb" />
 
-- Status Pesanan
+Pada halaman ini, Petani dapat memesan pupuk dengan memilih produk dan mengisi jumlah (kg), lalu menekan tombol Kirim pesanan. Sistem memeriksa sisa kuota dan stok kios sebelum pesanan diajukan.
+
+</details>
+
+<details>
+<summary>Status Pesanan</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37 (1)" src="https://github.com/user-attachments/assets/87bbbea6-c1e5-4d38-8b1c-880d72886c9f" />
 
-- Riwayat
+Pada halaman ini, Petani dapat memantau pesanannya dengan status Diproses, Diterima, Ditolak, atau Dibatalkan. Pesanan yang masih berstatus Diproses dapat dibatalkan lewat tombol Batalkan.
+
+</details>
+
+<details>
+<summary>Riwayat</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37 (2)" src="https://github.com/user-attachments/assets/82687aaa-7eff-4bc3-815f-11d5c6b7102f" />
 
-- Profil
+Pada halaman ini, Petani dapat melihat riwayat penerimaan, yaitu daftar pupuk yang sudah diterima.
+
+</details>
+
+<details>
+<summary>Profil</summary>
+
+<br>
+
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 35" src="https://github.com/user-attachments/assets/a6de18e7-2bb7-4d64-ba46-ede150e38c8e" />
+
+Pada halaman ini, Petani dapat melihat data akun miliknya, yaitu nama pengguna, email, nomor telepon, NIK, luas lahan, dan golongan. Lewat tombol Perbarui, Petani dapat memperbesar luas lahan, dan golongan akan menyesuaikan secara otomatis.
+
+</details>
 
 ---
 
