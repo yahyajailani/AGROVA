@@ -92,7 +92,7 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 | Desain UI/UX | **Figma** | Perancangan desain GUI atau UI/UX aplikasi. |
 | GUI | **Java Swing** | Antarmuka desktop, dirancang dengan NetBeans GUI Builder (berkas `.form`). |
 | ORM | **Hibernate ORM 7.4.5.Final** (JPA) | Dikonfigurasi lewat `persistence.xml` dan diuji pada `TestKoneksiOrm`. |
-| Arsitektur | **MVC + DAO** | Memisahkan tampilan, alur program, model data, dan akses database. |
+| Arsitektur | **MVC, DAO, & Singleton** | Memisahkan tampilan, alur program, model data, dan akses database. |
 | Build tool | **Apache Maven** | Dependency dan build, dengan `maven-shade-plugin` untuk JAR siap jalan. |
 | IDE | **Apache NetBeans** | Pengembangan dan perancangan GUI. |
 | Version control | **Git** dan **GitHub** | Pengelolaan versi dan kolaborasi tim. |
@@ -467,6 +467,119 @@ public interface CrudDao<T> {
     long insert(T data) throws SQLException;
     boolean update(T data) throws SQLException;
     boolean delete(int id) throws SQLException;
+}
+```
+
+---
+
+## ── ⟡ Penerapan Nilai Tambah
+
+### ˙🌱 ̟  JDBC (Java Database Connectivity)
+JDBC adalah API standar Java untuk menghubungkan program dengan database relasional. Lewat JDBC, program membuka koneksi, mengirim perintah SQL, lalu membaca hasilnya sebagai data Java. Agar aman dari SQL Injection, perintah SQL sebaiknya dijalankan dengan `PreparedStatement`, yaitu SQL yang nilainya diisi terpisah lewat tanda `?`.
+
+Pada AGROVA, JDBC menjadi jalur utama akses data. Class `Koneksi` membuka koneksi ke database agrova dengan driver MySQL Connector/J dan menyediakan helper `query`, `one`, `insert`, dan update yang semuanya memakai `PreparedStatement`. Alamat, user, dan sandi database dapat diganti lewat environment variable tanpa mengubah kode. Untuk proses yang melibatkan banyak langkah, `Koneksi.tx()` menjalankan transaksi dengan commit otomatis, dan rollback jika terjadi kesalahan. Seluruh query diletakkan di class `DAO`, sehingga bagian lain program tidak perlu mengetahui isi SQL-nya.
+
+```java
+private static final String URL = env("AGROVA_DB_URL", "jdbc:mysql://localhost:3306/agrova");
+private static final String USER = env("AGROVA_DB_USER", "root");
+private static final String PASS = env("AGROVA_DB_PASS", "");
+
+public static List query(String sql, Object... params) throws SQLException {
+    List list = new ArrayList();
+    Connection c = getConnection();
+    try (PreparedStatement ps = c.prepareStatement(sql)) {
+        for (int i = 0; i < params.length; i++) {
+            ps.setObject(i + 1, params[i]);
+        }
+        try (ResultSet rs = ps.executeQuery()) {
+        }
+    }
+    return list;
+}
+```
+
+```java
+public static void tx(Work work) throws SQLException {
+    Connection c = getConnection();
+    try {
+        c.setAutoCommit(false);
+        work.run();
+        c.commit();
+    } catch (SQLException e) {
+        c.rollback();
+        throw e;
+    }
+}
+```
+
+```java
+@Override
+public long insert(Kios k) throws SQLException {
+    return Koneksi.insert("INSERT INTO kios (nama_kios, nama_kecamatan) VALUES (?, ?)",
+            k.getNamaKios(), k.getNamaKecamatan());
+}
+```
+
+### ˙🌱 ̟  ORM (Object Relational Mapping)
+ORM adalah teknik yang memetakan class Java ke tabel database, sehingga data dapat dikelola sebagai objek tanpa menulis SQL manual. Pada AGROVA, ORM disiapkan dengan Hibernate 7.4.5.Final. Konfigurasi koneksi ada di `persistence.xml` (persistence unit perusahaanRootPU), lalu `EntityManagerProvider` membuat `EntityManagerFactory` dan menyediakan `EntityManager`. Pada versi ini, ORM dipakai untuk menguji koneksi lewat `TestKoneksiOrm`, sedangkan pengelolaan data utama (CRUD) memakai JDBC dan DAO. Class model belum dipetakan sebagai entity, sehingga `persistence.xml` memakai `exclude-unlisted-classes`.
+
+```java
+<persistence-unit name="perusahaanRootPU" transaction-type="RESOURCE_LOCAL">
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+        <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/agrova"/>
+        <property name="hibernate.hbm2ddl.auto" value="none"/>
+    </properties>
+</persistence-unit>
+```
+
+```java
+private static final EntityManagerFactory emf;
+
+static {
+    emf = Persistence.createEntityManagerFactory("perusahaanRootPU");
+}
+
+public static EntityManager getEntityManager() {
+    return emf.createEntityManager();
+}
+```
+
+```java
+try (EntityManager em = EntityManagerProvider.getEntityManager()) {
+    Object result = em.createNativeQuery("SELECT 1").getSingleResult();
+    System.out.println("Koneksi ORM berhasil: " + result);
+}
+```
+
+### ˙🌱 ̟  Singleton
+Singleton adalah pola desain yang menjamin sebuah class hanya punya satu instance (atau satu keadaan bersama) yang dipakai oleh seluruh program. Pola ini berguna untuk sumber daya yang mahal atau harus seragam, seperti koneksi database atau data sesi, karena mencegah pembuatan objek berulang dan data yang tidak sinkron.
+
+Pada AGROVA, prinsip ini diterapkan dalam bentuk static singleton di tiga tempat. `Koneksi` menyimpan satu `Connection` statis yang dipakai ulang oleh semua DAO dan hanya dibuat ulang jika koneksinya terputus. `EntityManagerProvider` membuat satu `EntityManagerFactory` sekali saja saat class pertama kali dimuat. `Session` menyimpan satu pengguna yang sedang login untuk seluruh aplikasi, constructor-nya `private` sehingga class ini tidak bisa diinstansiasi, dan semua akses lewat method statis.
+
+```java
+private static Connection conn = null;
+
+public static Connection getConnection() throws SQLException {
+    if (conn == null || conn.isClosed() || !conn.isValid(2)) {
+        conn = DriverManager.getConnection(URL, USER, PASS);
+    }
+    return conn;
+}
+```
+
+```java
+public final class Session {
+    private static User user;
+
+    private Session() {
+    }
+
+    public static User user() { return user; }
+    public static void masuk(User u) { user = u; }
+    public static void keluar() { user = null; }
+    public static boolean adaLogin() { return user != null; }
 }
 ```
 
