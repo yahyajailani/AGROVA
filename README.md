@@ -178,21 +178,21 @@ AGROVA dirancang dengan menggunakan pola MVC (Model-View-Controller) dan DAO (Da
 ```
 AGROVA/
 ├── database/
-│   └── perusahaan_root.sql             # skema + data awal
+│   └── perusahaan_root.sql
 ├── laporan/
-│   └── laporan_penyaluran_20261106_134052.pdf   # contoh keluaran PDF
+│   └── laporan_penyaluran_20261106_134052.pdf
 ├── src/main/
 │   ├── java/
 │   │   ├── config/
-│   │   │   ├── Koneksi.java            # koneksi JDBC + helper query
-│   │   │   ├── EntityManagerProvider.java   # entry point JPA/Hibernate
-│   │   │   ├── TestKoneksi.java        # uji koneksi JDBC
-│   │   │   └── TestKoneksiOrm.java     # uji koneksi ORM
+│   │   │   ├── Koneksi.java
+│   │   │   ├── EntityManagerProvider.java
+│   │   │   ├── TestKoneksi.java 
+│   │   │   └── TestKoneksiOrm.java 
 │   │   ├── controller/
-│   │   │   ├── GuiController.java      # penghubung GUI dan aturan bisnis
-│   │   │   ├── Session.java            # sesi pengguna yang sedang login
-│   │   │   ├── Kelola.java             # interface (kontrak) controller
-│   │   │   ├── RoleController.java     # abstract class controller per peran
+│   │   │   ├── GuiController.java 
+│   │   │   ├── Session.java 
+│   │   │   ├── Kelola.java  
+│   │   │   ├── RoleController.java 
 │   │   │   ├── AuthController.java
 │   │   │   ├── MainController.java
 │   │   │   ├── PengelolaController.java
@@ -200,9 +200,9 @@ AGROVA/
 │   │   │   ├── PenyaluranController.java
 │   │   │   └── PetaniController.java
 │   │   ├── main/
-│   │   │   └── Main.java               # titik masuk program
+│   │   │   └── Main.java  
 │   │   ├── model/
-│   │   │   ├── User.java               # abstract superclass akun
+│   │   │   ├── User.java  
 │   │   │   ├── Pengelola.java
 │   │   │   ├── Penyalur.java
 │   │   │   ├── Petani.java
@@ -210,51 +210,51 @@ AGROVA/
 │   │   │   ├── Kios.java
 │   │   │   ├── Pupuk.java
 │   │   │   ├── Penyaluran.java
-│   │   │   ├── KategoriPenyaluran.java # abstract superclass kategori pupuk
+│   │   │   ├── KategoriPenyaluran.java 
 │   │   │   ├── Subsidi.java
 │   │   │   ├── NonSubsidi.java
-│   │   │   ├── KlasifikasiPetani.java  # penentuan golongan dari luas lahan
-│   │   │   ├── Security.java           # hash SHA-256 dan validasi format
+│   │   │   ├── KlasifikasiPetani.java
+│   │   │   ├── Security.java
 │   │   │   ├── BusinessException.java
 │   │   │   └── dao/
-│   │   │       ├── CrudDao.java        # interface kontrak CRUD
+│   │   │       ├── CrudDao.java  
 │   │   │       ├── UserDao.java
 │   │   │       ├── PupukDao.java
 │   │   │       ├── PenyaluranDao.java
 │   │   │       ├── KiosDao.java
 │   │   │       └── LaporanDao.java
 │   │   └── view/
-│   │       ├── frmBeranda.java         # jendela tamu (beranda, tentang, rekomendasi)
+│   │       ├── frmBeranda.java   
 │   │       ├── frmLogin.java
 │   │       ├── frmDaftar.java
-│   │       ├── frmPengelola.java       # jendela utama per peran
+│   │       ├── frmPengelola.java 
 │   │       ├── frmPenyalur.java
 │   │       ├── frmPetani.java
-│   │       ├── PgBerandaGuest.java     # halaman tamu
+│   │       ├── PgBerandaGuest.java 
 │   │       ├── PgTentang.java
 │   │       ├── PgRekomendasi.java
-│   │       ├── PgDashboard.java        # halaman pengelola
+│   │       ├── PgDashboard.java   
 │   │       ├── PgPenyaluran.java
 │   │       ├── PgSubsidi.java
 │   │       ├── PgLihatData.java
 │   │       ├── PgLaporan.java
-│   │       ├── PgBerandaPenyalur.java  # halaman penyalur
+│   │       ├── PgBerandaPenyalur.java 
 │   │       ├── PgKonfirmasi.java
 │   │       ├── PgSalurkan.java
 │   │       ├── PgStok.java
 │   │       ├── PgRiwayatPenyalur.java
-│   │       ├── PgBerandaPetani.java    # halaman petani
+│   │       ├── PgBerandaPetani.java 
 │   │       ├── PgProduk.java
 │   │       ├── PgPesan.java
 │   │       ├── PgStatus.java
 │   │       ├── PgRiwayatPetani.java
-│   │       ├── PgProfil.java           # profil (semua peran)
-│   │       ├── dlgNota.java            # dialog bukti penyaluran
+│   │       ├── PgProfil.java 
+│   │       ├── dlgNota.java 
 │   │       ├── dlgNotifikasi.java
 │   │       ├── dlgUbahPenyaluran.java
-│   │       ├── PdfReport.java          # pembuat PDF
+│   │       ├── PdfReport.java 
 │   │       ├── Table.java
-│   │       ├── ConsoleView.java        # tampilan mode konsol
+│   │       ├── ConsoleView.java 
 │   │       ├── MainView.java
 │   │       ├── AuthView.java
 │   │       ├── PengelolaView.java
@@ -262,10 +262,10 @@ AGROVA/
 │   │       ├── PenyaluranView.java
 │   │       ├── PetaniView.java
 │   │       └── util/
-│   │           ├── Theme.java          # warna dan font
+│   │           ├── Theme.java
 │   │           ├── Styler.java
-│   │           ├── Nav.java            # navigasi antarhalaman
-│   │           ├── Refreshable.java    # interface halaman yang bisa disegarkan
+│   │           ├── Nav.java 
+│   │           ├── Refreshable.java
 │   │           ├── Validasi.java
 │   │           ├── InputFilters.java
 │   │           ├── Fields.java
@@ -286,7 +286,7 @@ AGROVA/
 │           ├── logo_kecil.png
 │           ├── eye.png
 │           ├── eye_off.png
-│           ├── pupuk/                  # gambar produk (13 pupuk)
+│           ├── pupuk/ 
 │           │   ├── urea_subsidi.png
 │           │   ├── npk_subsidi.png
 │           │   ├── npk_phonska_subsidi.png
@@ -300,12 +300,12 @@ AGROVA/
 │           │   ├── sp_36_nonsubsidi.png
 │           │   ├── tsp_nonsubsidi.png
 │           │   ├── dap_nonsubsidi.png
-│           │   └── kecil/              # versi thumbnail, 13 file dengan nama yang sama
+│           │   └── kecil/
 │           └── tentang/
 │               ├── pabrik.jpg
 │               ├── sdg8.png
 │               └── sdg12.png
-├── tools/                              # skrip bantu pembuatan form GUI
+├── tools/     
 │   ├── common.py
 │   ├── dsl.py
 │   ├── fb.py
