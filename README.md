@@ -317,17 +317,6 @@ AGROVA/
 ├── .gitignore
 └── pom.xml
 ```
-
-Adapun penjelasan singkat mengenai peran dari masing-masing package yang ada di dalam AGROVA, yaitu sebagai berikut.
-
-| Package | Peran |
-|---|---|
-| `config` | Pengaturan koneksi database (JDBC dan JPA) dan class uji koneksi. |
-| `model` | Class entitas dan aturan data. Tidak mencetak apa pun ke layar. |
-| `model.dao` | Semua query SQL berada di sini. |
-| `controller` | Alur program dan aturan bisnis (kuota, hak subsidi, stok). |
-| `view` | Tampilan Swing dan input pengguna. |
-| `view.util` | Tema, validasi input, tabel, grafik, dan komponen bantu. |
     
 ---
 
