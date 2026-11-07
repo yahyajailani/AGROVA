@@ -1,7 +1,6 @@
 <div align="center">
 
 # ── ⟡ ˙🌱 ̟  AGROVA  ˙🌱 ̟  ⟡ ──
-
 *Kelompok 18 ROOT*
 
 *Sistem Informasi Pengelolaan Distribusi Pupuk Subsidi dan Nonsubsidi*
@@ -182,7 +181,7 @@ AGROVA dirancang dengan menggunakan pola MVC (Model-View-Controller) dan DAO (Da
 ```
 AGROVA/
 ├── database/
-│   └── agrova.sql
+│   └── perusahaan_root.sql
 ├── laporan/
 │   └── laporan_penyaluran_20261106_134052.pdf
 ├── src/main/
@@ -312,15 +311,6 @@ AGROVA/
 │               ├── pabrik.jpg
 │               ├── sdg8.png
 │               └── sdg12.png
-├── tools/     
-│   ├── common.py
-│   ├── dsl.py
-│   ├── fb.py
-│   ├── guest.py
-│   ├── roles.py
-│   └── export/
-│       ├── Export.java
-│       └── Art.java.txt
 ├── .gitignore
 ├── README.md
 └── pom.xml
