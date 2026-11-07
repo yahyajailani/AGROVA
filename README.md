@@ -178,7 +178,7 @@ AGROVA dirancang dengan menggunakan pola MVC (Model-View-Controller) dan DAO (Da
 ```
 AGROVA/
 ├── database/
-│   └── perusahaan_root.sql
+│   └── agrova.sql
 ├── laporan/
 │   └── laporan_penyaluran_20261106_134052.pdf
 ├── src/main/
