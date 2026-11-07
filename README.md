@@ -325,7 +325,7 @@ AGROVA/
 ### ˙🌱 ̟  Encapsulation
 Encapsulation adalah pembungkusan data dan perilaku dalam satu class. Atribut disembunyikan dengan private, lalu akses ke atribut itu dibuka secara terkendali lewat getter dan setter. Dengan begitu, data tidak bisa diubah sembarangan dari luar dan aturan penjagaannya cukup ditulis di satu tempat.
 
-Pada AGROVA, encapsulation diterapkan pada class User dan Petani untuk menjaga data akun dan data petani tetap valid. Semua atributnya private, dan setter-nya memeriksa isi sebelum menyimpan: format email, no. HP 9–15 digit, NIK 16 digit, dan luas lahan 0,01–99,99 hektare. Jika aturan dilanggar, setter melempar BusinessException. Setter validasi juga dibuat final supaya subclass tidak bisa melonggarkan aturannya.
+Pada AGROVA, encapsulation diterapkan pada class User dan Petani untuk menjaga data akun dan data petani tetap valid. Semua atributnya private, dan setter-nya memeriksa isi sebelum menyimpan: format email, no. HP 10–13 digit, NIK 16 digit, dan luas lahan 0,01–99,99 hektare. Jika aturan dilanggar, setter melempar BusinessException. Setter validasi juga dibuat final supaya subclass tidak bisa melonggarkan aturannya.
 
 ```java
 public abstract class User {
