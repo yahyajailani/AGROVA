@@ -35,6 +35,8 @@ Aturan jatah dijalankan otomatis oleh sistem. Petani digolongkan dari luas lahan
 
 AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawab) dan **SDGs 8** (Pekerjaan Layak dan Pertumbuhan Ekonomi).
 
+</div>
+
 ---
 
 ## ── ⟡ Fitur Utama Program
@@ -108,42 +110,42 @@ Berikut ini merupakan beberapa menu flowchart atau diagram alur yang dibuat dala
 
 <details>
 <summary>1. Flowchart Menu Utama</summary>
-<img width="5007" height="2874" alt="Capstone kelompok 18 NEW-Menu Utama" src="https://github.com/user-attachments/assets/5aa48fa8-bed3-4d10-a0b0-60df57ebdd7f" />
+<img width="5007" height="2873" alt="Capstone kelompok 18 NEW-Menu Utama" src="https://github.com/user-attachments/assets/b114165a-cb1e-4298-b08b-4afbdbcd93e8" />
 </details>
 
 <details>
 <summary>2. Flowchart Menu Pengelola</summary>
-<img src="docs/images/flowchart/menu-pengelola.png" alt="Flowchart Menu Pengelola" width="800">
+<img width="2192" height="1979" alt="Capstone kelompok 18 NEW-Menu Pengelola" src="https://github.com/user-attachments/assets/5941343c-35e5-45b5-bbfa-ce2b695861d5" />
 </details>
 
 <details>
 <summary>3. Flowchart Menu Penyaluran</summary>
-<img src="docs/images/flowchart/menu-penyaluran.png" alt="Flowchart Menu Penyaluran" width="800">
+<img width="3052" height="1856" alt="Capstone kelompok 18 NEW-Menu Penyaluran" src="https://github.com/user-attachments/assets/bc61043e-0f73-4084-9041-4a8e3840eb3d" />
 </details>
 
 <details>
 <summary>4. Flowchart Menu Subsidi</summary>
-<img src="docs/images/flowchart/menu-subsidi.png" alt="Flowchart Menu Subsidi" width="800">
+<img width="3689" height="2073" alt="Capstone kelompok 18 NEW-Menu Subsidi" src="https://github.com/user-attachments/assets/efefd597-57ad-4aa9-9417-d9513bc11c42" />
 </details>
 
 <details>
 <summary>5. Flowchart Menu Nonsubsidi</summary>
-<img src="docs/images/flowchart/menu-nonsubsidi.png" alt="Flowchart Menu Nonsubsidi" width="800">
+<img width="2743" height="863" alt="Capstone kelompok 18 NEW-Menu Nonsubsidi" src="https://github.com/user-attachments/assets/6166455b-f888-42f0-b1dd-30d51cfb8247" />
 </details>
 
 <details>
 <summary>6. Flowchart Menu Penyalur</summary>
-<img src="docs/images/flowchart/menu-penyalur.png" alt="Flowchart Menu Penyalur" width="800">
+<img width="2630" height="1609" alt="Capstone kelompok 18 NEW-Menu Penyalur" src="https://github.com/user-attachments/assets/28696773-84cd-474d-bd49-be56af3119f7" />
 </details>
 
 <details>
 <summary>7. Flowchart Menu Petani: Subsidi</summary>
-<img src="docs/images/flowchart/menu-petani-subsidi.png" alt="Flowchart Menu Petani Subsidi" width="800">
+<img width="3287" height="2381" alt="Capstone kelompok 18 NEW-Menu Petani - Subsidi" src="https://github.com/user-attachments/assets/a5ed3611-0d06-4bf3-9025-0d93fe327fb3" />
 </details>
 
 <details>
 <summary>8. Flowchart Menu Petani: Nonsubsidi</summary>
-<img src="docs/images/flowchart/menu-petani-nonsubsidi.png" alt="Flowchart Menu Petani Nonsubsidi" width="800">
+<img width="1566" height="1042" alt="Capstone kelompok 18 NEW-Menu Petani - Nonsubsidi" src="https://github.com/user-attachments/assets/e11e62ed-d557-4d71-a9f1-cdba07260293" />
 </details>
 
 ### ˙🌱 ̟  Use Case Diagram
@@ -393,8 +395,6 @@ Buka program, lalu pilih **Masuk** atau **Daftar** di kanan atas. Petani dan pen
 | Vidya Khansa Mizan | 2509116052 | Sistem Informasi |
 | Yahya Jailani | 2509116085 | Sistem Informasi |
 | Rifaa Zainul Arifin | 2509116092 | Sistem Informasi |
-
-</div>
 
 <div align="center">
 
