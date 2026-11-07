@@ -317,17 +317,6 @@ AGROVA/
 ├── .gitignore
 └── pom.xml
 ```
-
-Adapun penjelasan singkat mengenai peran dari masing-masing package yang ada di dalam AGROVA, yaitu sebagai berikut.
-
-| Package | Peran |
-|---|---|
-| `config` | Pengaturan koneksi database (JDBC dan JPA) dan class uji koneksi. |
-| `model` | Class entitas dan aturan data. Tidak mencetak apa pun ke layar. |
-| `model.dao` | Semua query SQL berada di sini. |
-| `controller` | Alur program dan aturan bisnis (kuota, hak subsidi, stok). |
-| `view` | Tampilan Swing dan input pengguna. |
-| `view.util` | Tema, validasi input, tabel, grafik, dan komponen bantu. |
     
 ---
 
@@ -585,80 +574,79 @@ public final class Session {
 
 ---
 
-## ── ⟡ Alur Penggunaan Program
+## ── ⟡ Alur Penggunaan Program & Screenshot GUI
 Berikut ini ialah alur penggunaan program dari AGROVA.
 
-### ˙🌱 ̟  Akun uji coba
-| Peran | Email | Kata sandi | Catatan |
-|---|---|---|---|
-| Pengelola | `budi@perusahaan.com` | `budi123` | Kepala Cabang |
-| Penyalur | `makmur@kios.com` | `makmur1` | Toko Tani Makmur, Samarinda Ulu |
-| Petani | `joko@petani.com` | `joko11` | Gol B, kios Toko Tani Makmur |
-| Petani | `hartono@petani.com` | `hartono55` | Gol A, tidak berhak subsidi |
+### ˙🌱 ̟  Beranda 
+Pada bagian ini, akan dilampirkan tampilan dari Beranda AGROVA. Dalam bagian ini terdapat 3 button pilihan di atasnya yaitu Beranda, Tentang Kami, dan Rekomendasi. Berikut ini ialah lampiran gambar dari masing-masing button tersebut.
 
-### ˙🌱 ̟  Alur penggunaan
-<!-- TODO: ganti setiap screenshot dengan tangkapan layar asli, simpan di docs/images/screenshots/ -->
+- Beranda
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13" src="https://github.com/user-attachments/assets/af6846f4-b0a1-4e75-aefc-4b9335ef5e07" />
 
-<details>
-<summary><b>1. Beranda, Login, dan Daftar</b></summary>
+- Tentang Kami
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (1)" src="https://github.com/user-attachments/assets/3544d8f1-6876-49a9-ad3c-322884428fbb" />
 
-Buka program, lalu pilih **Masuk** atau **Daftar** di kanan atas. Petani dan penyalur dapat mendaftar sendiri. Akun pengelola sudah disiapkan di database.
+- Rekomendasi
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (2)" src="https://github.com/user-attachments/assets/54b5db2d-3363-43fa-960f-9fc43c84f1a0" />
 
-<img src="docs/images/screenshots/beranda.png" alt="Beranda" width="700">
-<img src="docs/images/screenshots/login.png" alt="Login" width="700">
-<img src="docs/images/screenshots/daftar.png" alt="Daftar" width="700">
-</details>
+Selain ketiga button di atas, terdapat pula 2 button di bagian pojok kanan atas yaitu Daftar dan Login. Berikut ini ialah lampiran gambar dari masing-masing button tersebut.
 
-<details>
-<summary><b>2. Pengelola</b></summary>
+- Daftar
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49" src="https://github.com/user-attachments/assets/77b286c0-821f-419d-b4e0-e9aea4df1da7" />
 
-1. Login sebagai pengelola, lalu lihat ringkasan di **Dashboard**.
-2. Buka **Pupuk Subsidi** untuk menetapkan kuota per kecamatan.
-3. Buka **Penyaluran**, pilih produk, kecamatan tujuan, dan jumlah (kg), lalu klik **Kirim ke penyalur**.
-4. Pantau hasilnya di **Lihat Data** dan **Laporan**.
+- Login
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49 (1)" src="https://github.com/user-attachments/assets/50894c78-9391-40c7-88ec-db2971a66c66" />
 
-<img src="docs/images/screenshots/pengelola-dashboard.png" alt="Dashboard Pengelola" width="700">
-<img src="docs/images/screenshots/pengelola-penyaluran.png" alt="Penyaluran" width="700">
-<img src="docs/images/screenshots/pengelola-subsidi.png" alt="Pupuk Subsidi" width="700">
-<img src="docs/images/screenshots/pengelola-laporan.png" alt="Laporan" width="700">
-</details>
+### ˙🌱 ̟  Menu Pengelola
+Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu pengelola. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
 
-<details>
-<summary><b>3. Penyalur</b></summary>
+- Dashboard
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 25" src="https://github.com/user-attachments/assets/63bf925f-8875-4c14-94ae-db39ec629923" />
 
-1. Login sebagai penyalur. Buka **Verifikasi** untuk menerima kiriman dari gudang dan memproses pesanan petani.
-2. Untuk menyerahkan pupuk langsung, buka **Salurkan**, isi NIK petani, pilih pupuk, isi jumlah, lalu klik **Salurkan ke petani**.
-3. Cek sisa pupuk di **Stok**, dan cetak bukti di **Riwayat**.
+- Penyaluran
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 25 (1)" src="https://github.com/user-attachments/assets/9f78c9ce-feca-442c-8303-eb7bd0147e2c" />
 
-<img src="docs/images/screenshots/penyalur-verifikasi.png" alt="Verifikasi" width="700">
-<img src="docs/images/screenshots/penyalur-salurkan.png" alt="Salurkan" width="700">
-<img src="docs/images/screenshots/penyalur-stok.png" alt="Stok" width="700">
-<img src="docs/images/screenshots/penyalur-nota.png" alt="Bukti penyaluran" width="700">
-</details>
+- Pupuk Subsidi
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 25 (2)" src="https://github.com/user-attachments/assets/0d2f7e5d-b2b2-4c6d-a28d-c2759be2da9f" />
 
-<details>
-<summary><b>4. Petani</b></summary>
+- Lihat Data
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 26" src="https://github.com/user-attachments/assets/29b84b70-5112-4bf5-a5ac-068ce6c97b99" />
 
-1. Login sebagai petani. **Beranda** menampilkan kuota dan sisa kuota.
-2. Lihat pupuk yang tersedia di **Produk**, lalu buka **Pesan** untuk memesan.
-3. Pantau pesanan di **Status Pesanan**. Pesanan yang masih Menunggu dapat dibatalkan.
-4. Lihat pupuk yang sudah diterima di **Riwayat**.
+- Laporan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 36" src="https://github.com/user-attachments/assets/d4686011-95ae-4af7-8595-8b5ec10bd49e" />
 
-<img src="docs/images/screenshots/petani-beranda.png" alt="Beranda Petani" width="700">
-<img src="docs/images/screenshots/petani-pesan.png" alt="Pesan" width="700">
-<img src="docs/images/screenshots/petani-status.png" alt="Status Pesanan" width="700">
-</details>
+- Profil
+
+### ˙🌱 ̟  Menu Penyalur
+Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu penyalur. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
+
+- Dashboard
+- Penyaluran
+- Pupuk Subsidi
+- Lihat Data
+- Laporan
+- Profil
+
+### ˙🌱 ̟  Menu Petani
+Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu petani. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
+
+- Dashboard
+- Penyaluran
+- Pupuk Subsidi
+- Lihat Data
+- Laporan
+- Profil
 
 ---
 
 ## ── ⟡ Kontributor
 
-| Nama | NIM | Program Studi |
+| Nama | NIM | Kelas |
 |---|---|---|
-| Elena Dementieva | 2509116008 | Sistem Informasi |
-| Vidya Khansa Mizan | 2509116052 | Sistem Informasi |
-| Yahya Jailani | 2509116085 | Sistem Informasi |
-| Rifaa Zainul Arifin | 2509116092 | Sistem Informasi |
+| Elena Dementieva | 2509116008 | Sistem Informasi A 2025 |
+| Vidya Khansa Mizan | 2509116052 | Sistem Informasi B 2025 |
+| Yahya Jailani | 2509116085 | Sistem Informasi C 2025 |
+| Rifaa Zainul Arifin | 2509116092 | Sistem Informasi C 2025 |
 
 <div align="center">
 
