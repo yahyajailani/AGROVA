@@ -582,20 +582,23 @@ Pada bagian ini, akan dilampirkan tampilan dari Beranda AGROVA. Dalam bagian ini
 
 - Beranda
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13" src="https://github.com/user-attachments/assets/af6846f4-b0a1-4e75-aefc-4b9335ef5e07" />
+Tampilan di atas merupakan tampilan pertama yang akan dilihat oleh para pengunjung ataupun pengguna AGROVA. Pada halaman ini, berisikan informasi terkait Distribusi Pupuk.
 
 - Tentang Kami
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (1)" src="https://github.com/user-attachments/assets/3544d8f1-6876-49a9-ad3c-322884428fbb" />
+Pada halaman ini, terdapat berbagai informasi lanjutan mengenai Perusahaan ROOT dan sistem AGROVA. Serta fokus SDGs dari Perusahaan ROOT dan cara kerja distribusi dari Perusahaan ROOT hingga sampai ke tangan petani.
 
 - Rekomendasi
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (2)" src="https://github.com/user-attachments/assets/54b5db2d-3363-43fa-960f-9fc43c84f1a0" />
-
-Selain ketiga button di atas, terdapat pula 2 button di bagian pojok kanan atas yaitu Daftar dan Login. Berikut ini ialah lampiran gambar dari masing-masing button tersebut.
+Pada halaman ini, terdapat informasi mengenai jenis pupuk yang paling banyak dialokasikan dan sebuah sistem yang akan merekomendasikan jenis pupuk terbaik untuk tanaman yang kita pilih.
 
 - Daftar
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49" src="https://github.com/user-attachments/assets/77b286c0-821f-419d-b4e0-e9aea4df1da7" />
+Lalu pada button yang terletak di pojok kanan atas, terdapat pilihan untuk Daftar dan Login. Para pengunjung yang belum terdaftar dapat memilih untuk mendaftar sebagai Penyalur atau Petani. Pada gambar di atas, terdapat tampilan dari halaman Daftar bagi Petani.
 
 - Login
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49 (1)" src="https://github.com/user-attachments/assets/50894c78-9391-40c7-88ec-db2971a66c66" />
+Jika sudah memiliki akun, maka pengguna dapat langsung memilih button Login. Gambar di atas merupakan tampilan dari halaman Login.
 
 ### ˙🌱 ̟  Menu Pengelola
 Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu pengelola. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
