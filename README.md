@@ -653,12 +653,12 @@ Buka program, lalu pilih **Masuk** atau **Daftar** di kanan atas. Petani dan pen
 
 ## ── ⟡ Kontributor
 
-| Nama | NIM | Program Studi |
+| Nama | NIM | Kelas |
 |---|---|---|
-| Elena Dementieva | 2509116008 | Sistem Informasi |
-| Vidya Khansa Mizan | 2509116052 | Sistem Informasi |
-| Yahya Jailani | 2509116085 | Sistem Informasi |
-| Rifaa Zainul Arifin | 2509116092 | Sistem Informasi |
+| Elena Dementieva | 2509116008 | Sistem Informasi A 2025 |
+| Vidya Khansa Mizan | 2509116052 | Sistem Informasi B 2025 |
+| Yahya Jailani | 2509116085 | Sistem Informasi C 2025 |
+| Rifaa Zainul Arifin | 2509116092 | Sistem Informasi C 2025 |
 
 <div align="center">
 
