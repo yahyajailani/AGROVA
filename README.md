@@ -145,7 +145,7 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 </details>
 
 ### ˙🌱 ̟  Use Case Diagram
-Sistem memiliki tiga aktor: **Pengelola**, **Penyalur**, dan **Petani**.
+Sistem AGROVA memiliki tiga aktor utama di dalamnya yaitu **Pengelola**, **Penyalur**, dan **Petani**.
 
 <details>
 <summary>Use Case Diagram AGROVA</summary>
@@ -158,33 +158,14 @@ Pupuk dan pengguna dimodelkan dengan pola *supertype–subtype*: `pupuk` dibagi 
 
 <details>
 <summary>ERD Logical</summary>
-<!-- TODO: docs/images/erd-logical.png -->
-<img src="docs/images/erd-logical.png" alt="ERD Logical" width="800">
+Berikut ini ialah gambar ERD Logical yang telah dibuat dalam pembuatan AGROVA.
+<img width="976" height="769" alt="ERD Logical Model" src="https://github.com/user-attachments/assets/36803989-7a08-4267-80de-a50ae925ba10" />
 </details>
 
 <details>
 <summary>ERD Relational</summary>
-<!-- TODO: docs/images/erd-relational.png -->
-<img src="docs/images/erd-relational.png" alt="ERD Relational" width="800">
-</details>
-
-<details>
-<summary>Daftar tabel dan relasi</summary>
-
-| Tabel | Keterangan |
-|---|---|
-| `user` | Akun dasar semua pengguna (nama, email, kata sandi ter-hash, no. HP, tipe user). |
-| `pengelola` | Subtype `user`: jabatan dan NIP. |
-| `penyalur` | Subtype `user`: nomor izin usaha dan kios. |
-| `petani` | Subtype `user`: NIK, luas lahan, golongan, dan kios. |
-| `kios` | Kios beserta kecamatan tempatnya beroperasi. |
-| `penyaluran` | Pengiriman dari gudang ke kios: status, tanggal kirim dan terima, jumlah karung, total berat. |
-| `pupuk` | Data pupuk dan stok. |
-| `subsidi` | Subtype `pupuk`: kuota subsidi, harga normal, HET, kuota alokasi. |
-| `non_subsidi` | Subtype `pupuk`: jumlah karung dan nomor PO. |
-| `transaksi` | Pesanan dan penyaluran langsung ke petani. Dibuat otomatis oleh aplikasi bila belum ada. |
-| `kuota_kecamatan` | Kuota pupuk per kecamatan, produk, dan tahun. Dibuat otomatis oleh aplikasi bila belum ada. |
-
+Berikut ini ialah gambar ERD Relational yang telah dibuat dalam pembuatan AGROVA.
+<img width="1041" height="900" alt="ERD Relational Model" src="https://github.com/user-attachments/assets/6a3ba9c9-9a3e-40e7-8d4d-f52ef9efa8f8" />
 </details>
 
 ---
