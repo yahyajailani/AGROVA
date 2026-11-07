@@ -616,26 +616,49 @@ Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam t
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 36" src="https://github.com/user-attachments/assets/d4686011-95ae-4af7-8595-8b5ec10bd49e" />
 
 - Profil
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 57" src="https://github.com/user-attachments/assets/6a7621c5-7825-481e-b850-f4b5ecc4cfe7" />
 
 ### ˙🌱 ̟  Menu Penyalur
 Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu penyalur. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
 
-- Dashboard
-- Penyaluran
-- Pupuk Subsidi
-- Lihat Data
-- Laporan
+- Beranda
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 08" src="https://github.com/user-attachments/assets/8bb34e06-c22d-41ee-b018-416c036de82c" />
+
+- Verifikasi
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 09" src="https://github.com/user-attachments/assets/d64e635b-5e9c-45e7-b944-a405953cdf1d" />
+
+- Salurkan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 09 (1)" src="https://github.com/user-attachments/assets/ef84ee79-47c0-45d2-a064-0a6a0d09807a" />
+
+- Stok
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 21" src="https://github.com/user-attachments/assets/af187a27-0051-40c5-a3eb-e96f58426a88" />
+
+- Riwayat
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 22" src="https://github.com/user-attachments/assets/712a001d-15be-4b6c-a897-19288b3b3e8f" />
+
 - Profil
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 22 (1)" src="https://github.com/user-attachments/assets/44aa932d-275d-4e0c-8cec-600d75787cc6" />
 
 ### ˙🌱 ̟  Menu Petani
 Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu petani. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
 
-- Dashboard
-- Penyaluran
-- Pupuk Subsidi
-- Lihat Data
-- Laporan
+- Beranda
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 34" src="https://github.com/user-attachments/assets/9fb8a90f-6a3f-4d79-8fe7-aa51e67de76a" />
+
+- Produk
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 36" src="https://github.com/user-attachments/assets/edc5ea8f-34fd-48cb-8a07-6f460adbf5a0" />
+
+- Pesan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37" src="https://github.com/user-attachments/assets/6ca600d1-1fe0-4d39-b533-799d789186cb" />
+
+- Status Pesanan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37 (1)" src="https://github.com/user-attachments/assets/87bbbea6-c1e5-4d38-8b1c-880d72886c9f" />
+
+- Riwayat
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37 (2)" src="https://github.com/user-attachments/assets/82687aaa-7eff-4bc3-815f-11d5c6b7102f" />
+
 - Profil
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 35" src="https://github.com/user-attachments/assets/a6de18e7-2bb7-4d64-ba46-ede150e38c8e" />
 
 ---
 
