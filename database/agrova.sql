@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 07, 2026 at 01:27 AM
--- Server version: 8.0.30
--- PHP Version: 8.1.10
+-- Host: 127.0.0.1
+-- Generation Time: Nov 07, 2026 at 04:12 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `kios` (
-  `id_kios` int NOT NULL,
-  `nama_kios` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `nama_kecamatan` varchar(100) COLLATE utf8mb4_general_ci NOT NULL
+  `id_kios` int(11) NOT NULL,
+  `nama_kios` varchar(100) NOT NULL,
+  `nama_kecamatan` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -38,26 +38,41 @@ CREATE TABLE `kios` (
 --
 
 INSERT INTO `kios` (`id_kios`, `nama_kios`, `nama_kecamatan`) VALUES
-(1, 'Toko Tani Makmur', 'Samarinda Ulu'),
-(2, 'Kios Subur Jaya', 'Samarinda Utara'),
+(1, 'Toko Tani Makmur', 'Samarinda Utara'),
+(2, 'Kios Subur Jaya', 'Sungai Pinang'),
 (3, 'CV Tani Sejahtera', 'Loa Janan Ilir'),
-(4, 'Toko Tani Berkah', 'Sambutan'),
-(5, 'Kios Tani Mandiri', 'Sungai Kunjang'),
-(6, 'UD Tani Subur', 'Samarinda Ilir'),
-(7, 'Toko Tani Jaya Abadi', 'Samarinda Kota'),
-(8, 'Kios Makmur Sentosa', 'Palaran'),
-(9, 'CV Tani Barokah', 'Sambutan Baru'),
-(10, 'Toko Tani Lestari', 'Sempaja Selatan'),
-(11, 'Kios Subur Makmur', 'Mugirejo'),
-(12, 'CV Tani Gemilang', 'Air Putih'),
-(13, 'Toko Tani Harapan', 'Sidodadi'),
-(14, 'Kios Tani Jaya', 'Teluk Lerong'),
-(15, 'CV Tani Utama', 'Baqa'),
-(16, 'Kios Tani Barokah II', 'Samarinda Ulu'),
-(17, 'Toko Tani Subur Makmur', 'Samarinda Utara'),
-(18, 'CV Tani Makmur Jaya', 'Loa Janan Ilir'),
+(4, 'Toko Tani Berkah', 'Samarinda Ulu'),
+(5, 'Kios Tani Mandiri', 'Samarinda Seberang'),
+(6, 'UD Tani Subur', 'Samarinda Ulu'),
+(7, 'Toko Tani Jaya Abadi', 'Sambutan'),
+(8, 'Kios Makmur Sentosa', 'Samarinda Ilir'),
+(9, 'CV Tani Barokah', 'Loa Janan Ilir'),
+(10, 'Toko Tani Lestari', 'Palaran'),
+(11, 'Kios Subur Makmur', 'Sungai Kunjang'),
+(12, 'CV Tani Gemilang', 'Sungai Kunjang'),
+(13, 'Toko Tani Harapan', 'Samarinda Kota'),
+(14, 'Kios Tani Jaya', 'Samarinda Ulu'),
+(15, 'CV Tani Utama', 'Sungai Pinang'),
+(16, 'Kios Tani Barokah II', 'Loa Janan Ilir'),
+(17, 'Toko Tani Subur Makmur', 'Samarinda Ilir'),
+(18, 'CV Tani Makmur Jaya', 'Palaran'),
 (19, 'anugrah', 'Samarinda Utara'),
-(20, 'anugrah', 'Samarinda Ulu');
+(20, 'anugrah', 'Palaran');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kuota_kecamatan`
+--
+
+CREATE TABLE `kuota_kecamatan` (
+  `id_kuota` int(11) NOT NULL,
+  `nama_kecamatan` varchar(100) NOT NULL,
+  `nama_pupuk` varchar(100) NOT NULL,
+  `kategori_pupuk` varchar(20) NOT NULL,
+  `tahun` int(11) NOT NULL,
+  `kuota_kg` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -66,9 +81,9 @@ INSERT INTO `kios` (`id_kios`, `nama_kios`, `nama_kecamatan`) VALUES
 --
 
 CREATE TABLE `non_subsidi` (
-  `id_pupuk` int NOT NULL,
-  `jumlah_karung_pupuk_nonsubsidi` int NOT NULL,
-  `no_po_pupuk` int NOT NULL
+  `id_pupuk` int(11) NOT NULL,
+  `jumlah_karung_pupuk_nonsubsidi` int(11) NOT NULL,
+  `no_po_pupuk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -150,14 +165,25 @@ INSERT INTO `non_subsidi` (`id_pupuk`, `jumlah_karung_pupuk_nonsubsidi`, `no_po_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `notifikasi_baca`
+--
+
+CREATE TABLE `notifikasi_baca` (
+  `id_user` int(11) NOT NULL,
+  `kunci` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengelola`
 --
 
 CREATE TABLE `pengelola` (
-  `id_user` int NOT NULL,
-  `tipe_user` enum('pengelola','petani','penyalur') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'pengelola',
-  `jabatan` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `nip` varchar(20) COLLATE utf8mb4_general_ci NOT NULL
+  `id_user` int(11) NOT NULL,
+  `tipe_user` enum('pengelola','petani','penyalur') NOT NULL DEFAULT 'pengelola',
+  `jabatan` varchar(100) NOT NULL,
+  `nip` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -176,12 +202,12 @@ INSERT INTO `pengelola` (`id_user`, `tipe_user`, `jabatan`, `nip`) VALUES
 --
 
 CREATE TABLE `penyalur` (
-  `id_user` int NOT NULL,
-  `tipe_user` enum('pengelola','petani','penyalur') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'penyalur',
-  `nomor_izin_usaha` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `nama_kios` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `kios_id_kios` int NOT NULL,
-  `no_telepon` varchar(25) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `id_user` int(11) NOT NULL,
+  `tipe_user` enum('pengelola','petani','penyalur') NOT NULL DEFAULT 'penyalur',
+  `nomor_izin_usaha` varchar(50) NOT NULL,
+  `nama_kios` varchar(100) NOT NULL,
+  `kios_id_kios` int(11) NOT NULL,
+  `no_telepon` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -204,15 +230,15 @@ INSERT INTO `penyalur` (`id_user`, `tipe_user`, `nomor_izin_usaha`, `nama_kios`,
 --
 
 CREATE TABLE `penyaluran` (
-  `id_penyaluran` int NOT NULL,
-  `status_kirim` varchar(50) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'Proses',
+  `id_penyaluran` int(11) NOT NULL,
+  `status_kirim` varchar(50) NOT NULL DEFAULT 'Proses',
   `tanggal_kirim` date NOT NULL,
   `tanggal_terima` date DEFAULT NULL,
-  `pengelola_id_user` int DEFAULT NULL,
-  `jumlah_karung` int NOT NULL,
-  `total_berat_kg` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `kios_id_kios` int DEFAULT NULL
-) ;
+  `pengelola_id_user` int(11) DEFAULT NULL,
+  `jumlah_karung` int(11) NOT NULL,
+  `total_berat_kg` varchar(50) NOT NULL,
+  `kios_id_kios` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `penyaluran`
@@ -244,12 +270,12 @@ INSERT INTO `penyaluran` (`id_penyaluran`, `status_kirim`, `tanggal_kirim`, `tan
 --
 
 CREATE TABLE `petani` (
-  `id_user` int NOT NULL,
-  `tipe_user` enum('pengelola','petani','penyalur') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'petani',
-  `nik` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `tipe_user` enum('pengelola','petani','penyalur') NOT NULL DEFAULT 'petani',
+  `nik` varchar(16) NOT NULL,
   `luas_lahan` decimal(4,2) NOT NULL,
-  `golongan` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
-  `kios_id_kios` int DEFAULT NULL
+  `golongan` varchar(10) NOT NULL,
+  `kios_id_kios` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -257,16 +283,16 @@ CREATE TABLE `petani` (
 --
 
 INSERT INTO `petani` (`id_user`, `tipe_user`, `nik`, `luas_lahan`, `golongan`, `kios_id_kios`) VALUES
-(10, 'petani', '6471011234560001', '1.50', 'Gol B', 1),
-(11, 'petani', '6471011234560002', '2.20', 'Gol A', 2),
-(12, 'petani', '6471011234560003', '0.80', 'Gol C', 3),
-(13, 'petani', '6471011234560004', '1.20', 'Gol B', 4),
-(14, 'petani', '6471011234560005', '3.00', 'Gol A', 5),
-(15, 'petani', '6471011234560006', '0.50', 'Gol C', 6),
-(16, 'petani', '6471011234560007', '1.75', 'Gol B', 7),
-(17, 'petani', '6471011234560008', '2.00', 'Gol B', 8),
-(18, 'petani', '6471011234560009', '1.10', 'Gol B', 9),
-(29, 'petani', '6452736481927364', '20.00', 'Gol A', 1);
+(10, 'petani', '6471011234560001', 1.50, 'Gol B', 1),
+(11, 'petani', '6471011234560002', 2.20, 'Gol A', 2),
+(12, 'petani', '6471011234560003', 0.80, 'Gol C', 3),
+(13, 'petani', '6471011234560004', 1.20, 'Gol B', 4),
+(14, 'petani', '6471011234560005', 3.00, 'Gol A', 5),
+(15, 'petani', '6471011234560006', 0.50, 'Gol C', 6),
+(16, 'petani', '6471011234560007', 1.75, 'Gol B', 7),
+(17, 'petani', '6471011234560008', 2.00, 'Gol B', 8),
+(18, 'petani', '6471011234560009', 1.10, 'Gol B', 9),
+(29, 'petani', '6452736481927364', 20.00, 'Gol A', 1);
 
 -- --------------------------------------------------------
 
@@ -275,14 +301,14 @@ INSERT INTO `petani` (`id_user`, `tipe_user`, `nik`, `luas_lahan`, `golongan`, `
 --
 
 CREATE TABLE `pupuk` (
-  `id_pupuk` int NOT NULL,
-  `nama_pupuk` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `kategori_pupuk` enum('Subsidi','Nonsubsidi') COLLATE utf8mb4_general_ci NOT NULL,
-  `satuan` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `stok_pupuk` int NOT NULL,
-  `deskripsi` text COLLATE utf8mb4_general_ci,
-  `penyaluran_id_penyaluran` int DEFAULT NULL
-) ;
+  `id_pupuk` int(11) NOT NULL,
+  `nama_pupuk` varchar(150) NOT NULL,
+  `kategori_pupuk` enum('Subsidi','Nonsubsidi') NOT NULL,
+  `satuan` varchar(50) NOT NULL,
+  `stok_pupuk` int(11) NOT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `penyaluran_id_penyaluran` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pupuk`
@@ -361,7 +387,7 @@ INSERT INTO `pupuk` (`id_pupuk`, `nama_pupuk`, `kategori_pupuk`, `satuan`, `stok
 (70, 'Urea nonsubsidi', 'Nonsubsidi', 'Kg', 2550, 'Urea Nonsubsidi Batch 10', 16),
 (71, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1800, 'NPK Nonsubsidi Batch 1', 17),
 (72, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1750, 'NPK Nonsubsidi Batch 2', NULL),
-(73, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1900, 'NPK Nonsubsidi Batch 3', 1),
+(73, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1890, 'NPK Nonsubsidi Batch 3', 1),
 (74, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1850, 'NPK Nonsubsidi Batch 4', 2),
 (75, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 2000, 'NPK Nonsubsidi Batch 5', 3),
 (76, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1700, 'NPK Nonsubsidi Batch 6', 4),
@@ -427,11 +453,11 @@ INSERT INTO `pupuk` (`id_pupuk`, `nama_pupuk`, `kategori_pupuk`, `satuan`, `stok
 --
 
 CREATE TABLE `subsidi` (
-  `id_pupuk` int NOT NULL,
-  `kuota_subsidi` int NOT NULL,
+  `id_pupuk` int(11) NOT NULL,
+  `kuota_subsidi` int(11) NOT NULL,
   `harga_normal` decimal(12,2) NOT NULL,
   `harga_het` decimal(12,2) NOT NULL,
-  `kuota_alokasi` int NOT NULL
+  `kuota_alokasi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -439,66 +465,92 @@ CREATE TABLE `subsidi` (
 --
 
 INSERT INTO `subsidi` (`id_pupuk`, `kuota_subsidi`, `harga_normal`, `harga_het`, `kuota_alokasi`) VALUES
-(1, 500, '150000.00', '115000.00', 600),
-(2, 480, '150000.00', '112500.00', 580),
-(3, 520, '150000.00', '112500.00', 620),
-(4, 460, '150000.00', '112500.00', 550),
-(5, 500, '150000.00', '112500.00', 600),
-(6, 480, '150000.00', '112500.00', 580),
-(7, 520, '150000.00', '112500.00', 620),
-(8, 460, '150000.00', '112500.00', 550),
-(9, 400, '150000.00', '112500.00', 500),
-(10, 390, '150000.00', '112500.00', 480),
-(11, 410, '150000.00', '112500.00', 510),
-(12, 380, '150000.00', '112500.00', 450),
-(13, 400, '150000.00', '112500.00', 500),
-(14, 390, '150000.00', '112500.00', 480),
-(15, 410, '150000.00', '112500.00', 510),
-(16, 380, '150000.00', '112500.00', 450),
-(17, 430, '150000.00', '112500.00', 530),
-(18, 440, '150000.00', '112500.00', 540),
-(19, 370, '150000.00', '112500.00', 430),
-(20, 450, '150000.00', '112500.00', 550),
-(21, 450, '160000.00', '120000.00', 550),
-(22, 440, '160000.00', '120000.00', 540),
-(23, 470, '160000.00', '120000.00', 570),
-(24, 460, '160000.00', '120000.00', 560),
-(25, 450, '160000.00', '120000.00', 550),
-(26, 440, '160000.00', '120000.00', 540),
-(27, 470, '160000.00', '120000.00', 570),
-(28, 460, '160000.00', '120000.00', 560),
-(29, 420, '160000.00', '120000.00', 520),
-(30, 480, '160000.00', '120000.00', 590),
-(31, 300, '100000.00', '85000.00', 350),
-(32, 290, '100000.00', '85000.00', 340),
-(33, 320, '100000.00', '85000.00', 370),
-(34, 310, '100000.00', '85000.00', 360),
-(35, 300, '100000.00', '85000.00', 350),
-(36, 290, '100000.00', '85000.00', 340),
-(37, 320, '100000.00', '85000.00', 370),
-(38, 310, '100000.00', '85000.00', 360),
-(39, 330, '100000.00', '85000.00', 390),
-(40, 340, '100000.00', '85000.00', 400),
-(41, 350, '120000.00', '95000.00', 420),
-(42, 360, '120000.00', '95000.00', 430),
-(43, 340, '120000.00', '95000.00', 410),
-(44, 370, '120000.00', '95000.00', 440),
-(45, 330, '120000.00', '95000.00', 390),
-(46, 380, '120000.00', '95000.00', 450),
-(47, 390, '120000.00', '95000.00', 460),
-(48, 320, '120000.00', '95000.00', 380),
-(49, 400, '120000.00', '95000.00', 480),
-(50, 410, '120000.00', '95000.00', 490),
-(51, 280, '90000.00', '75000.00', 330),
-(52, 290, '90000.00', '75000.00', 340),
-(53, 270, '90000.00', '75000.00', 320),
-(54, 300, '90000.00', '75000.00', 360),
-(55, 260, '90000.00', '75000.00', 310),
-(56, 310, '90000.00', '75000.00', 370),
-(57, 320, '90000.00', '75000.00', 380),
-(58, 250, '90000.00', '75000.00', 300),
-(59, 330, '90000.00', '75000.00', 390),
-(60, 340, '90000.00', '75000.00', 400);
+(1, 500, 150000.00, 115000.00, 600),
+(2, 480, 150000.00, 112500.00, 580),
+(3, 520, 150000.00, 112500.00, 620),
+(4, 460, 150000.00, 112500.00, 550),
+(5, 500, 150000.00, 112500.00, 600),
+(6, 480, 150000.00, 112500.00, 580),
+(7, 520, 150000.00, 112500.00, 620),
+(8, 460, 150000.00, 112500.00, 550),
+(9, 400, 150000.00, 112500.00, 500),
+(10, 390, 150000.00, 112500.00, 480),
+(11, 410, 150000.00, 112500.00, 510),
+(12, 380, 150000.00, 112500.00, 450),
+(13, 400, 150000.00, 112500.00, 500),
+(14, 390, 150000.00, 112500.00, 480),
+(15, 410, 150000.00, 112500.00, 510),
+(16, 380, 150000.00, 112500.00, 450),
+(17, 430, 150000.00, 112500.00, 530),
+(18, 440, 150000.00, 112500.00, 540),
+(19, 370, 150000.00, 112500.00, 430),
+(20, 450, 150000.00, 112500.00, 550),
+(21, 450, 160000.00, 120000.00, 550),
+(22, 440, 160000.00, 120000.00, 540),
+(23, 470, 160000.00, 120000.00, 570),
+(24, 460, 160000.00, 120000.00, 560),
+(25, 450, 160000.00, 120000.00, 550),
+(26, 440, 160000.00, 120000.00, 540),
+(27, 470, 160000.00, 120000.00, 570),
+(28, 460, 160000.00, 120000.00, 560),
+(29, 420, 160000.00, 120000.00, 520),
+(30, 480, 160000.00, 120000.00, 590),
+(31, 300, 100000.00, 85000.00, 350),
+(32, 290, 100000.00, 85000.00, 340),
+(33, 320, 100000.00, 85000.00, 370),
+(34, 310, 100000.00, 85000.00, 360),
+(35, 300, 100000.00, 85000.00, 350),
+(36, 290, 100000.00, 85000.00, 340),
+(37, 320, 100000.00, 85000.00, 370),
+(38, 310, 100000.00, 85000.00, 360),
+(39, 330, 100000.00, 85000.00, 390),
+(40, 340, 100000.00, 85000.00, 400),
+(41, 350, 120000.00, 95000.00, 420),
+(42, 360, 120000.00, 95000.00, 430),
+(43, 340, 120000.00, 95000.00, 410),
+(44, 370, 120000.00, 95000.00, 440),
+(45, 330, 120000.00, 95000.00, 390),
+(46, 380, 120000.00, 95000.00, 450),
+(47, 390, 120000.00, 95000.00, 460),
+(48, 320, 120000.00, 95000.00, 380),
+(49, 400, 120000.00, 95000.00, 480),
+(50, 410, 120000.00, 95000.00, 490),
+(51, 280, 90000.00, 75000.00, 330),
+(52, 290, 90000.00, 75000.00, 340),
+(53, 270, 90000.00, 75000.00, 320),
+(54, 300, 90000.00, 75000.00, 360),
+(55, 260, 90000.00, 75000.00, 310),
+(56, 310, 90000.00, 75000.00, 370),
+(57, 320, 90000.00, 75000.00, 380),
+(58, 250, 90000.00, 75000.00, 300),
+(59, 330, 90000.00, 75000.00, 390),
+(60, 340, 90000.00, 75000.00, 400);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_transaksi` int(11) NOT NULL,
+  `petani_id_user` int(11) NOT NULL,
+  `kios_id_kios` int(11) NOT NULL,
+  `nama_pupuk` varchar(100) NOT NULL,
+  `kategori_pupuk` varchar(20) NOT NULL,
+  `jumlah_kg` int(11) NOT NULL,
+  `jenis` varchar(10) NOT NULL,
+  `status` varchar(12) NOT NULL,
+  `tanggal` date NOT NULL,
+  `tanggal_selesai` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_transaksi`, `petani_id_user`, `kios_id_kios`, `nama_pupuk`, `kategori_pupuk`, `jumlah_kg`, `jenis`, `status`, `tanggal`, `tanggal_selesai`) VALUES
+(1, 10, 1, 'NPK', 'Nonsubsidi', 10, 'Pesanan', 'Diterima', '2026-11-07', '2026-11-07');
 
 -- --------------------------------------------------------
 
@@ -507,12 +559,12 @@ INSERT INTO `subsidi` (`id_pupuk`, `kuota_subsidi`, `harga_normal`, `harga_het`,
 --
 
 CREATE TABLE `user` (
-  `id_user` int NOT NULL,
-  `nama` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `no_hp` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
-  `tipe_user` enum('pengelola','petani','penyalur') COLLATE utf8mb4_general_ci NOT NULL
+  `id_user` int(11) NOT NULL,
+  `nama` varchar(150) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `tipe_user` enum('pengelola','petani','penyalur') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -552,11 +604,23 @@ ALTER TABLE `kios`
   ADD PRIMARY KEY (`id_kios`);
 
 --
+-- Indexes for table `kuota_kecamatan`
+--
+ALTER TABLE `kuota_kecamatan`
+  ADD PRIMARY KEY (`id_kuota`);
+
+--
 -- Indexes for table `non_subsidi`
 --
 ALTER TABLE `non_subsidi`
   ADD PRIMARY KEY (`id_pupuk`),
   ADD UNIQUE KEY `non_subsidi_no_po_UK` (`no_po_pupuk`);
+
+--
+-- Indexes for table `notifikasi_baca`
+--
+ALTER TABLE `notifikasi_baca`
+  ADD PRIMARY KEY (`id_user`,`kunci`);
 
 --
 -- Indexes for table `pengelola`
@@ -606,6 +670,12 @@ ALTER TABLE `subsidi`
   ADD PRIMARY KEY (`id_pupuk`);
 
 --
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_transaksi`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -621,25 +691,37 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kios`
 --
 ALTER TABLE `kios`
-  MODIFY `id_kios` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_kios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `kuota_kecamatan`
+--
+ALTER TABLE `kuota_kecamatan`
+  MODIFY `id_kuota` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `penyaluran`
 --
 ALTER TABLE `penyaluran`
-  MODIFY `id_penyaluran` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_penyaluran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `pupuk`
 --
 ALTER TABLE `pupuk`
-  MODIFY `id_pupuk` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pupuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
