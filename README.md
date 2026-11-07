@@ -923,6 +923,6 @@ Pada halaman ini, Petani dapat melihat data akun miliknya, yaitu nama pengguna, 
 
 <div align="center">
 
-Praktikum Sistem Basis Data · Program Studi Sistem Informasi · Fakultas Teknik · Universitas Mulawarman · 2026
+Capstone · Program Studi Sistem Informasi · Fakultas Teknik · Universitas Mulawarman · 2026
 
 </div>
