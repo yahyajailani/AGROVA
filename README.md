@@ -582,20 +582,24 @@ Pada bagian ini, akan dilampirkan tampilan dari Beranda AGROVA. Dalam bagian ini
 
 - Beranda
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13" src="https://github.com/user-attachments/assets/af6846f4-b0a1-4e75-aefc-4b9335ef5e07" />
+Tampilan di atas merupakan tampilan pertama yang akan dilihat oleh para pengunjung ataupun pengguna AGROVA. Pada halaman ini, berisikan informasi terkait Distribusi Pupuk.
 
 - Tentang Kami
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (1)" src="https://github.com/user-attachments/assets/3544d8f1-6876-49a9-ad3c-322884428fbb" />
+Pada halaman ini, terdapat berbagai informasi lanjutan mengenai Perusahaan ROOT dan sistem AGROVA. Serta fokus SDGs dari Perusahaan ROOT dan cara kerja distribusi dari Perusahaan ROOT hingga sampai ke tangan petani.
 
 - Rekomendasi
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 49 13 (2)" src="https://github.com/user-attachments/assets/54b5db2d-3363-43fa-960f-9fc43c84f1a0" />
-
-Selain ketiga button di atas, terdapat pula 2 button di bagian pojok kanan atas yaitu Daftar dan Login. Berikut ini ialah lampiran gambar dari masing-masing button tersebut.
+Pada halaman ini, terdapat informasi mengenai jenis pupuk yang paling banyak dialokasikan dan sebuah sistem yang akan merekomendasikan jenis pupuk terbaik untuk tanaman yang kita pilih.
 
 - Daftar
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49" src="https://github.com/user-attachments/assets/77b286c0-821f-419d-b4e0-e9aea4df1da7" />
+Lalu pada button yang terletak di pojok kanan atas, terdapat pilihan untuk Daftar dan Login. Para pengunjung yang belum terdaftar dapat memilih untuk mendaftar sebagai Penyalur atau Petani. Pada gambar di atas, terdapat tampilan dari halaman Daftar bagi Petani. Sedangkan gambar di bawah menunjukkan tampilan halaman Daftar bagi Penyalur.
+`GAMBARRRR`
 
 - Login
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 50 49 (1)" src="https://github.com/user-attachments/assets/50894c78-9391-40c7-88ec-db2971a66c66" />
+Jika sudah memiliki akun, maka pengguna dapat langsung memilih button Login. Gambar di atas merupakan tampilan dari halaman Login.
 
 ### ˙🌱 ̟  Menu Pengelola
 Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu pengelola. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
@@ -616,26 +620,49 @@ Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam t
 <img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 19 44 36" src="https://github.com/user-attachments/assets/d4686011-95ae-4af7-8595-8b5ec10bd49e" />
 
 - Profil
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 57" src="https://github.com/user-attachments/assets/561c99b9-d49e-4a4e-8cee-d19609f4d678" />
 
 ### ˙🌱 ̟  Menu Penyalur
 Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu penyalur. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
 
-- Dashboard
-- Penyaluran
-- Pupuk Subsidi
-- Lihat Data
-- Laporan
+- Beranda
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 08" src="https://github.com/user-attachments/assets/2e8a5915-7892-46fb-b943-6456983c3b03" />
+
+- Verifikasi
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 09" src="https://github.com/user-attachments/assets/c911b09c-926e-48e9-85cd-c29f641a1622" />
+
+- Salurkan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 09 (1)" src="https://github.com/user-attachments/assets/9ec49f7f-24a3-4f8d-809f-083d94003955" />
+
+- Stok
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 21" src="https://github.com/user-attachments/assets/56740c72-166c-48de-9176-79bfbd32af40" />
+
+- Riwayat
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 22" src="https://github.com/user-attachments/assets/296e922b-61c6-4e14-8f4a-da8f31cc6a42" />
+
 - Profil
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 32 22 (1)" src="https://github.com/user-attachments/assets/1d62b62b-ba8d-4cf3-a78f-483d3a4c1243" />
 
 ### ˙🌱 ̟  Menu Petani
 Pada bagian ini, akan dilampirkan berbagai pilihan menu yang terdapat di dalam tampilan menu petani. Berikut ini ialah lampiran gambar yang berada di Menu Pengelola ini.
 
-- Dashboard
-- Penyaluran
-- Pupuk Subsidi
-- Lihat Data
-- Laporan
+- Beranda
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 34" src="https://github.com/user-attachments/assets/28a0c622-0d7c-486d-a44c-40e0b746b0fc" />
+
+- Produk
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 36" src="https://github.com/user-attachments/assets/4f376a29-c0b4-4d22-ba27-7829497e1062" />
+
+- Pesan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37" src="https://github.com/user-attachments/assets/1fa0c5dc-7a95-49af-bda0-3490616af3d3" />
+
+- Status Pesanan
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37 (1)" src="https://github.com/user-attachments/assets/a8a810c4-65da-4a6b-9735-20f35986a9e2" />
+
+- Riwayat
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 37 (2)" src="https://github.com/user-attachments/assets/1f9deacb-330e-49c2-a4bc-bda1dbfb0c1d" />
+
 - Profil
+<img width="1600" height="1000" alt="WhatsApp Image 2026-11-07 at 20 34 35" src="https://github.com/user-attachments/assets/c0dca29f-c81c-4f07-a626-c7526cd93f7b" />
 
 ---
 
