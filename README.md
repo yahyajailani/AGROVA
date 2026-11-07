@@ -172,7 +172,8 @@ Berikut ini ialah gambar ERD Relational yang telah dibuat dalam pembuatan AGROVA
 </details>
 
 ---
-
+<div align="justify">
+    
 ## ── ⟡ Struktur Folder/Package
 
 AGROVA dirancang dengan menggunakan pola MVC (Model-View-Controller) dan DAO (Data Access Object) agar pemisahan tugas antar-bagian menjadi lebih jelas. Tampilan antarmuka, proses bisnis, data, dan koneksi database dipisah secara terstruktur agar kode menjadi lebih rapi, serta mudah untuk dikelola dan dikembangkan ke depannya.
@@ -253,6 +254,8 @@ AGROVA/
     └── RekapPenyaluran.pdf
 ```
 
+Adapun penjelasan singkat mengenai peran dari masing-masing package yang ada di dalam AGROVA, yaitu sebagai berikut.
+
 | Package | Peran |
 |---|---|
 | `config` | Pengaturan koneksi database (JDBC dan JPA) dan class uji koneksi. |
@@ -262,6 +265,8 @@ AGROVA/
 | `view` | Tampilan Swing dan input pengguna. |
 | `view.util` | Tema, validasi input, tabel, grafik, dan komponen bantu. |
 
+<\div>
+    
 ---
 
 ## ── ⟡ Penerapan 4 Pilar OOP
