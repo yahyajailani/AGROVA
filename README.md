@@ -2,10 +2,12 @@
 
 # ── ⟡ ˙🌱 ̟  AGROVA  ˙🌱 ̟  ⟡ ──
 
-*Sistem Informasi Pengelolaan Distribusi Pupuk Subsidi dan Nonsubsidi*
-*Perusahaan Root · Samarinda*
+*Kelompok 18 ROOT*
 
 <img width="1047" height="496" alt="WhatsApp Image 2026-11-07 at 15 49 22" src="https://github.com/user-attachments/assets/2e5f0b5d-982c-470c-8e7b-f9641789a1be" />
+
+*Sistem Informasi Pengelolaan Distribusi Pupuk Subsidi dan Nonsubsidi*
+*Perusahaan Root · Samarinda*
 
 </div>
 
