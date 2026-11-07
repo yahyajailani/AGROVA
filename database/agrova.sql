@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 07, 2026 at 02:34 PM
+-- Generation Time: Nov 07, 2026 at 01:27 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -57,30 +57,7 @@ INSERT INTO `kios` (`id_kios`, `nama_kios`, `nama_kecamatan`) VALUES
 (17, 'Toko Tani Subur Makmur', 'Samarinda Utara'),
 (18, 'CV Tani Makmur Jaya', 'Loa Janan Ilir'),
 (19, 'anugrah', 'Samarinda Utara'),
-(20, 'anugrah', 'Samarinda Ulu'),
-(21, 'noby', 'Sungai Kunjang');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `kuota_kecamatan`
---
-
-CREATE TABLE `kuota_kecamatan` (
-  `id_kuota` int NOT NULL,
-  `nama_kecamatan` varchar(100) NOT NULL,
-  `nama_pupuk` varchar(100) NOT NULL,
-  `kategori_pupuk` varchar(20) NOT NULL,
-  `tahun` int NOT NULL,
-  `kuota_kg` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `kuota_kecamatan`
---
-
-INSERT INTO `kuota_kecamatan` (`id_kuota`, `nama_kecamatan`, `nama_pupuk`, `kategori_pupuk`, `tahun`, `kuota_kg`) VALUES
-(1, 'Samarinda Ulu', 'NPK', 'Subsidi', 2026, 100);
+(20, 'anugrah', 'Samarinda Ulu');
 
 -- --------------------------------------------------------
 
@@ -173,38 +150,6 @@ INSERT INTO `non_subsidi` (`id_pupuk`, `jumlah_karung_pupuk_nonsubsidi`, `no_po_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notifikasi_baca`
---
-
-CREATE TABLE `notifikasi_baca` (
-  `id_user` int NOT NULL,
-  `kunci` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `notifikasi_baca`
---
-
-INSERT INTO `notifikasi_baca` (`id_user`, `kunci`) VALUES
-(1, 'PNY-10-Selesai'),
-(1, 'PNY-11-Selesai'),
-(1, 'PNY-12-Selesai'),
-(1, 'PNY-13-Proses'),
-(1, 'PNY-14-Selesai'),
-(1, 'PNY-15-Selesai'),
-(1, 'PNY-16-Selesai'),
-(1, 'PNY-17-Proses'),
-(1, 'PNY-3-Proses'),
-(1, 'PNY-4-Selesai'),
-(1, 'PNY-5-Selesai'),
-(1, 'PNY-6-Proses'),
-(1, 'PNY-7-Selesai'),
-(1, 'PNY-8-Selesai'),
-(1, 'PNY-9-Proses');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `pengelola`
 --
 
@@ -250,8 +195,7 @@ INSERT INTO `penyalur` (`id_user`, `tipe_user`, `nomor_izin_usaha`, `nama_kios`,
 (7, 'penyalur', 'SIUP/2023/004', 'Toko Tani Berkah', 4, NULL),
 (8, 'penyalur', 'SIUP/2023/005', 'Kios Tani Mandiri', 5, NULL),
 (9, 'penyalur', 'SIUP/2023/006', 'UD Tani Subur', 6, NULL),
-(30, 'penyalur', 'SIUP/2026/2500', 'anugrah', 20, '0825361728374'),
-(31, 'penyalur', 'SIUP/2026/209', 'noby', 21, '0821837625123');
+(30, 'penyalur', 'SIUP/2026/2500', 'anugrah', 20, '0825361728374');
 
 -- --------------------------------------------------------
 
@@ -291,8 +235,7 @@ INSERT INTO `penyaluran` (`id_penyaluran`, `status_kirim`, `tanggal_kirim`, `tan
 (14, 'Selesai', '2026-03-23', '2026-03-24', 2, 17, '850 Kg', 14),
 (15, 'Selesai', '2026-03-25', '2026-03-26', 3, 25, '1250 Kg', 15),
 (16, 'Selesai', '2026-03-27', '2026-03-28', 1, 30, '1500 Kg', 16),
-(17, 'Proses', '2026-03-29', NULL, 2, 40, '2000 Kg', 17),
-(19, 'Selesai', '2026-11-07', '2026-11-07', 1, 2, '100 Kg', 1);
+(17, 'Proses', '2026-03-29', NULL, 2, 40, '2000 Kg', 17);
 
 -- --------------------------------------------------------
 
@@ -418,7 +361,7 @@ INSERT INTO `pupuk` (`id_pupuk`, `nama_pupuk`, `kategori_pupuk`, `satuan`, `stok
 (70, 'Urea nonsubsidi', 'Nonsubsidi', 'Kg', 2550, 'Urea Nonsubsidi Batch 10', 16),
 (71, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1800, 'NPK Nonsubsidi Batch 1', 17),
 (72, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1750, 'NPK Nonsubsidi Batch 2', NULL),
-(73, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1890, 'NPK Nonsubsidi Batch 3', 1),
+(73, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1900, 'NPK Nonsubsidi Batch 3', 1),
 (74, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1850, 'NPK Nonsubsidi Batch 4', 2),
 (75, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 2000, 'NPK Nonsubsidi Batch 5', 3),
 (76, 'NPK nonsubsidi', 'Nonsubsidi', 'Kg', 1700, 'NPK Nonsubsidi Batch 6', 4),
@@ -475,8 +418,7 @@ INSERT INTO `pupuk` (`id_pupuk`, `nama_pupuk`, `kategori_pupuk`, `satuan`, `stok
 (127, 'DAP', 'Nonsubsidi', 'Kg', 1050, 'DAP Batch 7', 1),
 (128, 'DAP', 'Nonsubsidi', 'Kg', 1200, 'DAP Batch 8', 2),
 (129, 'DAP', 'Nonsubsidi', 'Kg', 1000, 'DAP Batch 9', 3),
-(130, 'DAP', 'Nonsubsidi', 'Kg', 1100, 'DAP Batch 10', 4),
-(131, 'ZA', 'Subsidi', 'Kg', 100, NULL, 19);
+(130, 'DAP', 'Nonsubsidi', 'Kg', 1100, 'DAP Batch 10', 4);
 
 -- --------------------------------------------------------
 
@@ -556,34 +498,7 @@ INSERT INTO `subsidi` (`id_pupuk`, `kuota_subsidi`, `harga_normal`, `harga_het`,
 (57, 320, '90000.00', '75000.00', 380),
 (58, 250, '90000.00', '75000.00', 300),
 (59, 330, '90000.00', '75000.00', 390),
-(60, 340, '90000.00', '75000.00', 400),
-(131, 2, '95000.00', '95000.00', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `transaksi`
---
-
-CREATE TABLE `transaksi` (
-  `id_transaksi` int NOT NULL,
-  `petani_id_user` int NOT NULL,
-  `kios_id_kios` int NOT NULL,
-  `nama_pupuk` varchar(100) NOT NULL,
-  `kategori_pupuk` varchar(20) NOT NULL,
-  `jumlah_kg` int NOT NULL,
-  `jenis` varchar(10) NOT NULL,
-  `status` varchar(12) NOT NULL,
-  `tanggal` date NOT NULL,
-  `tanggal_selesai` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `transaksi`
---
-
-INSERT INTO `transaksi` (`id_transaksi`, `petani_id_user`, `kios_id_kios`, `nama_pupuk`, `kategori_pupuk`, `jumlah_kg`, `jenis`, `status`, `tanggal`, `tanggal_selesai`) VALUES
-(1, 29, 1, 'NPK', 'Nonsubsidi', 10, 'Langsung', 'Diterima', '2026-11-07', '2026-11-07');
+(60, 340, '90000.00', '75000.00', 400);
 
 -- --------------------------------------------------------
 
@@ -624,8 +539,7 @@ INSERT INTO `user` (`id_user`, `nama`, `email`, `password`, `no_hp`, `tipe_user`
 (17, 'Sugeng Raharjo', 'sugeng@petani.com', '1287d0899d99b3c36b1013cce97de79669997e1005986057f564b1c45ac3de02', '085222333408', 'petani'),
 (18, 'Parno', 'parno@petani.com', '56cb9d4d14e00477cfc35a8af595d712f91fbada1f88d6bbcf5b5e97bd0c1c4a', '085222333409', 'petani'),
 (29, 'elen', 'elen@petani.com', '2052c12d55e5fd01c4f9543e37b1a4ab7c72afa23766a5b588c7f7aa5179af12', '082111222301', 'petani'),
-(30, 'anugrah', 'anugrah@kios.com', '1017b0c1594140b0645582a16a55247b0a8a111d4a57f7318856dce350bbb752', '0825361728374', 'penyalur'),
-(31, 'noby', 'noby@kios.com', '2052c12d55e5fd01c4f9543e37b1a4ab7c72afa23766a5b588c7f7aa5179af12', '0821837625123', 'penyalur');
+(30, 'anugrah', 'anugrah@kios.com', '1017b0c1594140b0645582a16a55247b0a8a111d4a57f7318856dce350bbb752', '0825361728374', 'penyalur');
 
 --
 -- Indexes for dumped tables
@@ -638,23 +552,11 @@ ALTER TABLE `kios`
   ADD PRIMARY KEY (`id_kios`);
 
 --
--- Indexes for table `kuota_kecamatan`
---
-ALTER TABLE `kuota_kecamatan`
-  ADD PRIMARY KEY (`id_kuota`);
-
---
 -- Indexes for table `non_subsidi`
 --
 ALTER TABLE `non_subsidi`
   ADD PRIMARY KEY (`id_pupuk`),
   ADD UNIQUE KEY `non_subsidi_no_po_UK` (`no_po_pupuk`);
-
---
--- Indexes for table `notifikasi_baca`
---
-ALTER TABLE `notifikasi_baca`
-  ADD PRIMARY KEY (`id_user`,`kunci`);
 
 --
 -- Indexes for table `pengelola`
@@ -704,12 +606,6 @@ ALTER TABLE `subsidi`
   ADD PRIMARY KEY (`id_pupuk`);
 
 --
--- Indexes for table `transaksi`
---
-ALTER TABLE `transaksi`
-  ADD PRIMARY KEY (`id_transaksi`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -725,13 +621,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kios`
 --
 ALTER TABLE `kios`
-  MODIFY `id_kios` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `kuota_kecamatan`
---
-ALTER TABLE `kuota_kecamatan`
-  MODIFY `id_kuota` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_kios` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `penyaluran`
@@ -746,16 +636,10 @@ ALTER TABLE `pupuk`
   MODIFY `id_pupuk` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `transaksi`
---
-ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
