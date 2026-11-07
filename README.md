@@ -178,77 +178,144 @@ AGROVA dirancang dengan menggunakan pola MVC (Model-View-Controller) dan DAO (Da
 ```
 AGROVA/
 ├── database/
-│   └── perusahaan_root.sql
+│   └── perusahaan_root.sql             # skema + data awal
+├── laporan/
+│   └── laporan_penyaluran_20261106_134052.pdf   # contoh keluaran PDF
 ├── src/main/
 │   ├── java/
 │   │   ├── config/
-│   │   │   ├── DatabaseConfig.java
-│   │   │   ├── EntityManagerProvider.java
-│   │   │   ├── Koneksi.java
-│   │   │   └── TestKoneksiOrm.java
+│   │   │   ├── Koneksi.java            # koneksi JDBC + helper query
+│   │   │   ├── EntityManagerProvider.java   # entry point JPA/Hibernate
+│   │   │   ├── TestKoneksi.java        # uji koneksi JDBC
+│   │   │   └── TestKoneksiOrm.java     # uji koneksi ORM
 │   │   ├── controller/
+│   │   │   ├── GuiController.java      # penghubung GUI dan aturan bisnis
+│   │   │   ├── Session.java            # sesi pengguna yang sedang login
+│   │   │   ├── Kelola.java             # interface (kontrak) controller
+│   │   │   ├── RoleController.java     # abstract class controller per peran
 │   │   │   ├── AuthController.java
-│   │   │   ├── GuiController.java
-│   │   │   ├── KelolaController.java
+│   │   │   ├── MainController.java
 │   │   │   ├── PengelolaController.java
 │   │   │   ├── PenyalurController.java
-│   │   │   ├── PetaniController.java
-│   │   │   ├── PupukController.java
 │   │   │   ├── PenyaluranController.java
-│   │   │   ├── KiosController.java
-│   │   │   └── RoleController.java
+│   │   │   └── PetaniController.java
 │   │   ├── main/
-│   │   │   └── Main.java
+│   │   │   └── Main.java               # titik masuk program
 │   │   ├── model/
-│   │   │   ├── User.java
+│   │   │   ├── User.java               # abstract superclass akun
 │   │   │   ├── Pengelola.java
 │   │   │   ├── Penyalur.java
 │   │   │   ├── Petani.java
+│   │   │   ├── Role.java
+│   │   │   ├── Kios.java
 │   │   │   ├── Pupuk.java
 │   │   │   ├── Penyaluran.java
-│   │   │   ├── Kios.java
+│   │   │   ├── KategoriPenyaluran.java # abstract superclass kategori pupuk
 │   │   │   ├── Subsidi.java
 │   │   │   ├── NonSubsidi.java
-│   │   │   ├── KategoriPenyaluran.java
-│   │   │   ├── Role.java
-│   │   │   └── Security.java
-│   │   ├── dao/
-│   │   │   ├── CrudDao.java
-│   │   │   ├── UserDao.java
-│   │   │   ├── PupukDao.java
-│   │   │   ├── PenyaluranDao.java
-│   │   │   ├── KiosDao.java
-│   │   │   └── LaporanDao.java
+│   │   │   ├── KlasifikasiPetani.java  # penentuan golongan dari luas lahan
+│   │   │   ├── Security.java           # hash SHA-256 dan validasi format
+│   │   │   ├── BusinessException.java
+│   │   │   └── dao/
+│   │   │       ├── CrudDao.java        # interface kontrak CRUD
+│   │   │       ├── UserDao.java
+│   │   │       ├── PupukDao.java
+│   │   │       ├── PenyaluranDao.java
+│   │   │       ├── KiosDao.java
+│   │   │       └── LaporanDao.java
 │   │   └── view/
-│   │       ├── BerandaView.java
-│   │       ├── LoginView.java
-│   │       ├── DaftarView.java
+│   │       ├── frmBeranda.java         # jendela tamu (beranda, tentang, rekomendasi)
+│   │       ├── frmLogin.java
+│   │       ├── frmDaftar.java
+│   │       ├── frmPengelola.java       # jendela utama per peran
+│   │       ├── frmPenyalur.java
+│   │       ├── frmPetani.java
+│   │       ├── PgBerandaGuest.java     # halaman tamu
+│   │       ├── PgTentang.java
+│   │       ├── PgRekomendasi.java
+│   │       ├── PgDashboard.java        # halaman pengelola
+│   │       ├── PgPenyaluran.java
+│   │       ├── PgSubsidi.java
+│   │       ├── PgLihatData.java
+│   │       ├── PgLaporan.java
+│   │       ├── PgBerandaPenyalur.java  # halaman penyalur
+│   │       ├── PgKonfirmasi.java
+│   │       ├── PgSalurkan.java
+│   │       ├── PgStok.java
+│   │       ├── PgRiwayatPenyalur.java
+│   │       ├── PgBerandaPetani.java    # halaman petani
+│   │       ├── PgProduk.java
+│   │       ├── PgPesan.java
+│   │       ├── PgStatus.java
+│   │       ├── PgRiwayatPetani.java
+│   │       ├── PgProfil.java           # profil (semua peran)
+│   │       ├── dlgNota.java            # dialog bukti penyaluran
+│   │       ├── dlgNotifikasi.java
+│   │       ├── dlgUbahPenyaluran.java
+│   │       ├── PdfReport.java          # pembuat PDF
+│   │       ├── Table.java
+│   │       ├── ConsoleView.java        # tampilan mode konsol
+│   │       ├── MainView.java
+│   │       ├── AuthView.java
 │   │       ├── PengelolaView.java
 │   │       ├── PenyalurView.java
+│   │       ├── PenyaluranView.java
 │   │       ├── PetaniView.java
-│   │       ├── LaporanView.java
-│   │       ├── dialog/
-│   │       │   ├── KonfirmasiDialog.java
-│   │       │   ├── InputPupukDialog.java
-│   │       │   └── DetailPenyaluranDialog.java
 │   │       └── util/
+│   │           ├── Theme.java          # warna dan font
+│   │           ├── Styler.java
+│   │           ├── Nav.java            # navigasi antarhalaman
+│   │           ├── Refreshable.java    # interface halaman yang bisa disegarkan
+│   │           ├── Validasi.java
+│   │           ├── InputFilters.java
+│   │           ├── Fields.java
+│   │           ├── TableKit.java
 │   │           ├── Charts.java
 │   │           ├── Dialogs.java
-│   │           ├── Nav.java
-│   │           ├── Styler.java
-│   │           ├── TableKit.java
-│   │           ├── Theme.java
-│   │           └── Validasi.java
+│   │           ├── Icons.java
+│   │           ├── ThinScrollBarUI.java
+│   │           └── SampleData.java
 │   └── resources/
 │       ├── META-INF/
 │       │   └── persistence.xml
 │       └── images/
-│           ├── logo.png
-│           ├── hero.png
-│           └── sdgs.png
-├── tools/
-└── laporan/
-    └── RekapPenyaluran.pdf
+│           ├── beranda_hero.png
+│           ├── beranda_hero_gelap.png
+│           ├── daftar_brand.png
+│           ├── login_brand.png
+│           ├── logo_kecil.png
+│           ├── eye.png
+│           ├── eye_off.png
+│           ├── pupuk/                  # gambar produk (13 pupuk)
+│           │   ├── urea_subsidi.png
+│           │   ├── npk_subsidi.png
+│           │   ├── npk_phonska_subsidi.png
+│           │   ├── npk_untuk_kakao_subsidi.png
+│           │   ├── za_subsidi.png
+│           │   ├── dolomit_subsidi.png
+│           │   ├── urea_nonsubsidi.png
+│           │   ├── npk_nonsubsidi.png
+│           │   ├── za_nonsubsidi.png
+│           │   ├── kcl_nonsubsidi.png
+│           │   ├── sp_36_nonsubsidi.png
+│           │   ├── tsp_nonsubsidi.png
+│           │   ├── dap_nonsubsidi.png
+│           │   └── kecil/              # versi thumbnail, 13 file dengan nama yang sama
+│           └── tentang/
+│               ├── pabrik.jpg
+│               ├── sdg8.png
+│               └── sdg12.png
+├── tools/                              # skrip bantu pembuatan form GUI
+│   ├── common.py
+│   ├── dsl.py
+│   ├── fb.py
+│   ├── guest.py
+│   ├── roles.py
+│   └── export/
+│       ├── Export.java
+│       └── Art.java.txt
+├── .gitignore
+└── pom.xml
 ```
 
 Adapun penjelasan singkat mengenai peran dari masing-masing package yang ada di dalam AGROVA, yaitu sebagai berikut.
@@ -267,9 +334,10 @@ Adapun penjelasan singkat mengenai peran dari masing-masing package yang ada di 
 ## ── ⟡ Penerapan 4 Pilar OOP
 
 ### ˙🌱 ̟  Encapsulation
-Atribut pada class model dibuat `private` dan hanya bisa diubah lewat getter/setter. Setter sekaligus menjadi tempat validasi, sehingga data yang masuk ke objek selalu sudah benar. Setter yang divalidasi dibuat `final` agar aturannya tidak bisa ditimpa subclass.
+Encapsulation adalah pembungkusan data dan perilaku dalam satu class. Atribut disembunyikan dengan private, lalu akses ke atribut itu dibuka secara terkendali lewat getter dan setter. Dengan begitu, data tidak bisa diubah sembarangan dari luar dan aturan penjagaannya cukup ditulis di satu tempat.
 
-`model/User.java`
+Pada AGROVA, encapsulation diterapkan pada class User dan Petani untuk menjaga data akun dan data petani tetap valid. Semua atributnya private, dan setter-nya memeriksa isi sebelum menyimpan: format email, no. HP 9–15 digit, NIK 16 digit, dan luas lahan 0,01–99,99 hektare. Jika aturan dilanggar, setter melempar BusinessException. Setter validasi juga dibuat final supaya subclass tidak bisa melonggarkan aturannya.
+
 ```java
 public abstract class User {
     private int id;
@@ -290,14 +358,23 @@ public abstract class User {
         }
         this.noHp = noHp;
     }
-    // ...
+}
+```
+
+```java
+public final void setNik(String nik) {
+    if (!Security.isDigits(nik, 16, 16)) {
+        throw new BusinessException("NIK harus 16 digit angka.");
+    }
+    this.nik = nik;
 }
 ```
 
 ### ˙🌱 ̟  Inheritance
-`Pengelola`, `Penyalur`, dan `Petani` mewarisi `User`, sehingga atribut dasar akun (id, nama, email, no. HP) cukup ditulis sekali. Tiap subclass menambahkan atribut miliknya sendiri dan memanggil constructor induk dengan `super(...)`.
+Inheritance memungkinkan sebuah class (subclass) mewarisi atribut dan method dari class lain (superclass) lewat kata kunci extends. Atribut dan method yang sama cukup ditulis sekali di superclass, sehingga kode tidak berulang dan hubungan antarclass lebih jelas.
 
-`model/Pengelola.java`
+Pada AGROVA, Pengelola, Penyalur, dan Petani mewarisi User, sehingga data dasar akun (id, nama, email, no. HP) ditulis satu kali di User. Tiap subclass hanya menambahkan atribut miliknya, misalnya jabatan dan NIP untuk pengelola, atau NIK, luas lahan, dan golongan untuk petani, lalu memanggil constructor induk dengan super(...). Pola ini sama dengan supertype dan subtype pada ERD (user menjadi pengelola, penyalur, petani). Pewarisan juga dipakai pada `Subsidi` dan `NonSubsidi` yang mewarisi `KategoriPenyaluran`.
+
 ```java
 public class Pengelola extends User {
     private String jabatan;
@@ -308,17 +385,20 @@ public class Pengelola extends User {
         this.jabatan = jabatan;
         this.nip = nip;
     }
-    // ...
 }
 ```
-Pewarisan juga dipakai pada `Subsidi` dan `NonSubsidi` yang mewarisi `KategoriPenyaluran`.
 
 ### ˙🌱 ̟  Polymorphism
-**Overriding.** `Subsidi` dan `NonSubsidi` sama-sama menimpa `validasi()` dengan aturan yang berbeda. Saat `Penyaluran` divalidasi, program cukup memanggil `getDetail().validasi(...)` dan Java memilih versi yang sesuai dengan jenis objeknya.
+Polymorphism berarti satu nama method dapat berperilaku berbeda tergantung konteksnya. Ada dua bentuknya: overriding, ketika perilaku ditentukan oleh jenis objek saat program berjalan, dan overloading, ketika perilaku ditentukan oleh parameter yang dikirim. Keduanya membuat kode pemanggil lebih sederhana karena tidak perlu memeriksa jenis objek satu per satu.
 
-`model/Subsidi.java` dan `model/NonSubsidi.java`
+Pada AGROVA, kedua bentuk ini dipakai. Overriding muncul pada aturan validasi kategori pupuk (Subsidi dan NonSubsidi) serta pada `getInfoProfil()` milik tiap peran pengguna. Sedangkan, overloading muncul pada `UserDao.cari()` yang bisa mencari pengguna berdasarkan id maupun email.
+
+* **Overriding**\
+Overriding terjadi ketika subclass menulis ulang method milik superclass dengan nama dan parameter yang sama, biasanya ditandai dengan `@Override` tetapi dengan isi yang berbeda. Saat method dipanggil, Java memilih versi yang sesuai dengan jenis objek sebenarnya.
+
+Pada AGROVA, Subsidi dan NonSubsidi sama-sama menimpa `validasi()` dari `KategoriPenyaluran`. Pupuk subsidi menolak penyaluran yang melebihi kuota, sedangkan nonsubsidi hanya mensyaratkan minimal 1 karung. Oleh karena itu, `Penyaluran.validasiSebelumSimpan()` cukup memanggil `getDetail().validasi(...)` tanpa mengecek jenis pupuknya. Overriding juga dipakai pada `getInfoProfil():` Pengelola dan Petani memanggil versi induk lalu menambahkan data khas masing-masing.
+
 ```java
-// Subsidi
 @Override
 public void validasi(int totalKarung) {
     if (totalKarung > kuotaSubsidi) {
@@ -327,7 +407,6 @@ public void validasi(int totalKarung) {
     }
 }
 
-// NonSubsidi
 @Override
 public void validasi(int totalKarung) {
     if (totalKarung < 1) {
@@ -335,32 +414,53 @@ public void validasi(int totalKarung) {
     }
 }
 ```
-Contoh lain: `getInfoProfil()` pada `User` ditimpa oleh tiap subclass untuk menambahkan data khasnya (jabatan dan NIP untuk pengelola, NIK dan luas lahan untuk petani).
 
-**Overloading.** `UserDao` memiliki dua method `cari` dengan parameter berbeda.
-
-`model/dao/UserDao.java`
 ```java
-public User cari(int id) throws SQLException { /* cari berdasarkan id user */ }
+for (Pupuk p : pupuk) {
+    p.getDetail().validasi(p.getKarung());
+}
+```
 
-public User cari(String email) throws SQLException { /* cari berdasarkan email */ }
+```java
+@Override
+public Map<String, Object> getInfoProfil() {
+    Map<String, Object> m = super.getInfoProfil();
+    m.put("jabatan", jabatan);
+    m.put("nip", nip);
+    return m;
+}
+```
+
+* **Overloading**\
+Overloading adalah penulisan beberapa method dengan nama yang sama dalam satu class, tetapi dengan jumlah atau tipe parameter yang berbeda. Java memilih method yang tepat saat kompilasi berdasarkan argumen yang diberikan.
+
+Pada AGROVA, `UserDao` memiliki dua method `cari. cari(int id)` mencari pengguna berdasarkan id dengan memeriksa tabel pengelola, penyalur, lalu petani. `cari(String email)` mencari berdasarkan email, kemudian meneruskan hasilnya ke `cari(int id)`. Pemanggil cukup menulis `cari(...)` dan sistem memilih versi yang cocok dengan data yang dimiliki.
+
+```java
+public User cari(int id) throws SQLException {
+}
+
+public User cari(String email) throws SQLException {
+    Map<String, Object> r = Koneksi.one("SELECT id_user FROM `user` WHERE email = ?", email);
+    return r == null || r.isEmpty() ? null : cari(Koneksi.intOf(r, "id_user"));
+}
 ```
 
 ### ˙🌱 ̟  Abstraction
-- **Abstract class `User`** memaksa setiap subclass menentukan perannya lewat `getPeran()`.
-- **Abstract class `KategoriPenyaluran`** menetapkan kerangka kategori pupuk (`getNama()` dan `validasi()`) tanpa isi.
-- **Interface `CrudDao<T>`** menjadi kontrak operasi database (`findAll`, `findById`, `insert`, `update`, `delete`) yang diimplementasikan `PupukDao`, `PenyaluranDao`, dan `KiosDao`.
-- **Interface `Kelola`** menjadi kontrak untuk controller.
+Abstraction adalah penyederhanaan program dengan menampilkan hal yang pokok dan menyembunyikan detail pelaksanaannya. Penerapannya memakai abstract class, yang boleh berisi method tanpa isi, dan interface, yang berfungsi sebagai kontrak bagi class lain. Pengguna class cukup tahu apa yang bisa dilakukan, tidak perlu tahu bagaimana caranya.
 
-`model/User.java`, `model/KategoriPenyaluran.java`, `model/dao/CrudDao.java`
+Pada AGROVA, abstraction diterapkan di tiga tempat. User adalah abstract class yang mewajibkan setiap subclass menentukan perannya lewat `getPeran()`. KategoriPenyaluran adalah abstract class yang hanya menetapkan `getNama()` dan `validasi()` untuk dilengkapi Subsidi dan NonSubsidi. Sementara itu, interface `CrudDao<T>` menjadi kontrak operasi database yang diimplementasikan `PupukDao`, `PenyaluranDao`, dan `KiosDao`, sehingga bagian lain program memakai `findAll`, `insert`, `update`, dan `delete` tanpa tahu isi query SQL-nya.
+
 ```java
-public abstract Role getPeran();   // User
+public abstract Role getPeran();   
 
 public abstract class KategoriPenyaluran {
     public abstract String getNama();
     public abstract void validasi(int totalKarung);
 }
+```
 
+```java
 public interface CrudDao<T> {
     List<T> findAll() throws SQLException;
     T findById(int id) throws SQLException;
