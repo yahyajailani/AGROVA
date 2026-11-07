@@ -35,8 +35,6 @@ Aturan jatah dijalankan otomatis oleh sistem. Petani digolongkan dari luas lahan
 
 AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawab) dan **SDGs 8** (Pekerjaan Layak dan Pertumbuhan Ekonomi).
 
-</div>
-
 ---
 
 ## ── ⟡ Fitur Utama Program
@@ -172,7 +170,6 @@ Berikut ini ialah gambar ERD Relational yang telah dibuat dalam pembuatan AGROVA
 </details>
 
 ---
-<div align="justify">
     
 ## ── ⟡ Struktur Folder/Package
 
@@ -264,8 +261,6 @@ Adapun penjelasan singkat mengenai peran dari masing-masing package yang ada di 
 | `controller` | Alur program dan aturan bisnis (kuota, hak subsidi, stok). |
 | `view` | Tampilan Swing dan input pengguna. |
 | `view.util` | Tema, validasi input, tabel, grafik, dan komponen bantu. |
-
-<\div>
     
 ---
 
