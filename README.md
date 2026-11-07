@@ -5,7 +5,7 @@
 *Sistem Informasi Pengelolaan Distribusi Pupuk Subsidi dan Nonsubsidi*
 *Perusahaan Root · Samarinda*
 
-<img width="1264" height="844" alt="WhatsApp Image 2026-11-07 at 14 59 23" src="https://github.com/user-attachments/assets/617691fb-72bf-43ea-86b8-cc4fcab35130" />
+<img width="1047" height="496" alt="WhatsApp Image 2026-11-07 at 15 49 22" src="https://github.com/user-attachments/assets/2e5f0b5d-982c-470c-8e7b-f9641789a1be" />
 
 </div>
 
@@ -81,15 +81,21 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 | Kategori | Teknologi | Keterangan |
 |---|---|---|
 | Bahasa | **Java 17** | Logika aplikasi dan penerapan OOP. |
-| GUI | **Java Swing** | Antarmuka desktop, dirancang dengan NetBeans GUI Builder (berkas `.form`). |
+| Riset dan Penelusuran | **Google Chrome & Google Scholar** | Penelusuran referensi literatur, jurnal, dan pencarian solusi teknis. |
+| Pemodelan dan Diagram | **Draw.io** | Pembuatan flowchart dan Use Case Diagram |
+| Perancangan Database | **Data Modeler** | Perancangan struktur dan relasi basis data (Entity Relationship Diagram / ERD). |
 | Database | **MySQL / MariaDB** | Menyimpan data pengguna, kios, pupuk, penyaluran, dan transaksi. |
-| Akses data | **JDBC** + **MySQL Connector/J 8.3.0** | Query lewat `PreparedStatement` di dalam class DAO. |
+| Dokumentasi | **Microsoft Word** | Penyusunan draf laporan dan dokumentasi proyek. |
+| Akses data | **JDBC & MySQL Connector/J 8.3.0** | Query lewat `PreparedStatement` di dalam class DAO. |
+| Desain UI/UX | **Figma** | Perancangan desain GUI atau UI/UX aplikasi. |
+| GUI | **Java Swing** | Antarmuka desktop, dirancang dengan NetBeans GUI Builder (berkas `.form`). |
 | ORM | **Hibernate ORM 7.4.5.Final** (JPA) | Dikonfigurasi lewat `persistence.xml` dan diuji pada `TestKoneksiOrm`. |
 | Arsitektur | **MVC + DAO** | Memisahkan tampilan, alur program, model data, dan akses database. |
 | Build tool | **Apache Maven** | Dependency dan build, dengan `maven-shade-plugin` untuk JAR siap jalan. |
 | IDE | **Apache NetBeans** | Pengembangan dan perancangan GUI. |
 | Version control | **Git** dan **GitHub** | Pengelolaan versi dan kolaborasi tim. |
 | Keamanan | **SHA-256** | Kata sandi disimpan dalam bentuk hash (`model.Security`). |
+| Presentasi | **Canva** | Pembuatan presentasi (slide deck) proyek. |
 
 ---
 
