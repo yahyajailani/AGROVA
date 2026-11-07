@@ -1,4 +1,4 @@
-<img width="1442" height="1382" alt="Capstone kelompok 18 NEW-Use Case" src="https://github.com/user-attachments/assets/96729c69-dba9-43ba-acca-5622fd9a7f63" /><div align="center">
+<div align="center">
 
 # ── ⟡ ˙🌱 ̟  AGROVA  ˙🌱 ̟  ⟡ ──
 
@@ -10,6 +10,8 @@
 </div>
 
 ---
+
+<div align="justify">
 
 ## ── ⟡ Deskripsi Singkat
 
@@ -106,7 +108,7 @@ Berikut ini merupakan beberapa menu flowchart atau diagram alur yang dibuat dala
 
 <details>
 <summary>1. Flowchart Menu Utama</summary>
-<img src="docs/images/flowchart/menu-utama.png" alt="Flowchart Menu Utama" width="800">
+<img width="5007" height="2874" alt="Capstone kelompok 18 NEW-Menu Utama" src="https://github.com/user-attachments/assets/5aa48fa8-bed3-4d10-a0b0-60df57ebdd7f" />
 </details>
 
 <details>
@@ -391,6 +393,8 @@ Buka program, lalu pilih **Masuk** atau **Daftar** di kanan atas. Petani dan pen
 | Vidya Khansa Mizan | 2509116052 | Sistem Informasi |
 | Yahya Jailani | 2509116085 | Sistem Informasi |
 | Rifaa Zainul Arifin | 2509116092 | Sistem Informasi |
+
+</div>
 
 <div align="center">
 
