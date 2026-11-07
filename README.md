@@ -4,10 +4,10 @@
 
 *Kelompok 18 ROOT*
 
-<img width="1047" height="496" alt="WhatsApp Image 2026-11-07 at 15 49 22" src="https://github.com/user-attachments/assets/2e5f0b5d-982c-470c-8e7b-f9641789a1be" />
-
 *Sistem Informasi Pengelolaan Distribusi Pupuk Subsidi dan Nonsubsidi*
 *Perusahaan Root · Samarinda*
+
+<img width="1047" height="496" alt="WhatsApp Image 2026-11-07 at 15 49 22" src="https://github.com/user-attachments/assets/2e5f0b5d-982c-470c-8e7b-f9641789a1be" />
 
 </div>
 
@@ -57,8 +57,8 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 | Penyaluran | Mengirim pupuk dari gudang ke kecamatan tujuan. Data dapat dicari, diubah, dan dihapus. |
 | Pupuk Subsidi | Menetapkan kuota per kecamatan, produk, dan tahun. Penyaluran tidak boleh melebihi kuota. Tersedia pemantauan terpakai, dikirim, dipesan, dan sisa kuota. |
 | Lihat Data | Data petani, data penyalur, dan ketersediaan pupuk (hanya baca). |
-| Laporan | Rekap penyaluran dengan filter tanggal, produk, dan kecamatan. |
-| Notifikasi dan Profil | Pemberitahuan terbaru dan data akun. |
+| Laporan | Rekap penyaluran dengan filter tanggal (dipilih lewat kalender), produk, dan kecamatan. |
+| Notifikasi dan Profil | Pemberitahuan pupuk diterima atau ditolak penyalur dan transaksi yang berjalan, serta data akun. |
 
 ### ˙🌱 ̟  Penyalur
 | Fitur | Penjelasan |
@@ -68,6 +68,7 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 | Salurkan | Menyerahkan pupuk langsung ke petani. Cukup isi NIK 16 digit, nama petani tampil otomatis, lalu sistem mengecek kuota dan pilihan pupuk yang boleh diberikan. |
 | Stok | Stok kios: jumlah diterima, terjual, dipesan, dan sisa. |
 | Riwayat | Riwayat transaksi kios. Bukti penyaluran dapat dicetak dan disimpan sebagai PDF. |
+| Notifikasi dan Profil | Pemberitahuan kiriman dan pesanan yang perlu dikonfirmasi, serta data akun. |
 
 ### ˙🌱 ̟  Petani
 | Fitur | Penjelasan |
@@ -75,8 +76,9 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 | Beranda | Kuota, sisa kuota, dan pesanan aktif. |
 | Produk | Pupuk yang tersedia di kios kecamatan petani. |
 | Pesan | Memesan pupuk sesuai kuota. Petani Gol A hanya melihat pupuk nonsubsidi. |
-| Status Pesanan | Memantau pesanan dan membatalkan pesanan yang masih berstatus Menunggu. |
+| Status Pesanan | Memantau pesanan dengan status Diproses, Diterima, Ditolak, atau Dibatalkan. Pesanan yang masih Diproses dapat dibatalkan. |
 | Riwayat | Daftar pupuk yang sudah diterima. |
+| Notifikasi dan Profil | Pemberitahuan pesanan diterima atau ditolak, serta data akun. Luas lahan dapat diperbarui (hanya bisa bertambah) dan golongan menyesuaikan otomatis. |
 
 ---
 
@@ -93,7 +95,7 @@ AGROVA berkaitan dengan **SDGs 12** (Konsumsi dan Produksi yang Bertanggung Jawa
 | Akses data | **JDBC & MySQL Connector/J 8.3.0** | Query lewat `PreparedStatement` di dalam class DAO. |
 | Desain UI/UX | **Figma** | Perancangan desain GUI atau UI/UX aplikasi. |
 | GUI | **Java Swing** | Antarmuka desktop, dirancang dengan NetBeans GUI Builder (berkas `.form`). |
-| ORM | **Hibernate ORM 7.4.5.Final** (JPA) | Dikonfigurasi lewat `persistence.xml` dan diuji pada `TestKoneksiOrm`. |
+| ORM | **Hibernate ORM 7.4.5.Final** (JPA) | Entity `Kios` dan `KiosDao`, dikonfigurasi lewat `persistence.xml` dan diuji pada `TestKoneksiOrm`. |
 | Arsitektur | **MVC, DAO, & Singleton** | Memisahkan tampilan, alur program, model data, dan akses database. |
 | Build tool | **Apache Maven** | Dependency dan build, dengan `maven-shade-plugin` untuk JAR siap jalan. |
 | IDE | **Apache NetBeans** | Pengembangan dan perancangan GUI. |
@@ -253,6 +255,7 @@ AGROVA/
 │   │       ├── PgProfil.java 
 │   │       ├── dlgNota.java 
 │   │       ├── dlgNotifikasi.java
+│   │       ├── dlgUbahLahan.java
 │   │       ├── dlgUbahPenyaluran.java
 │   │       ├── PdfReport.java 
 │   │       ├── Table.java
@@ -274,6 +277,7 @@ AGROVA/
 │   │           ├── TableKit.java
 │   │           ├── Charts.java
 │   │           ├── Dialogs.java
+│   │           ├── DatePicker.java
 │   │           ├── Icons.java
 │   │           ├── ThinScrollBarUI.java
 │   │           └── SampleData.java
@@ -286,6 +290,7 @@ AGROVA/
 │           ├── daftar_brand.png
 │           ├── login_brand.png
 │           ├── logo_kecil.png
+│           ├── logo_agrova.png
 │           ├── eye.png
 │           ├── eye_off.png
 │           ├── pupuk/ 
@@ -317,6 +322,7 @@ AGROVA/
 │       ├── Export.java
 │       └── Art.java.txt
 ├── .gitignore
+├── README.md
 └── pom.xml
 ```
     
@@ -327,7 +333,7 @@ AGROVA/
 ### ˙🌱 ̟  Encapsulation
 Encapsulation adalah pembungkusan data dan perilaku dalam satu class. Atribut disembunyikan dengan private, lalu akses ke atribut itu dibuka secara terkendali lewat getter dan setter. Dengan begitu, data tidak bisa diubah sembarangan dari luar dan aturan penjagaannya cukup ditulis di satu tempat.
 
-Pada AGROVA, encapsulation diterapkan pada class User dan Petani untuk menjaga data akun dan data petani tetap valid. Semua atributnya private, dan setter-nya memeriksa isi sebelum menyimpan: format email, no. HP 10–13 digit, NIK 16 digit, dan luas lahan 0,01–99,99 hektare. Jika aturan dilanggar, setter melempar BusinessException. Setter validasi juga dibuat final supaya subclass tidak bisa melonggarkan aturannya.
+Pada AGROVA, encapsulation diterapkan pada class User dan Petani untuk menjaga data akun dan data petani tetap valid. Semua atributnya private, dan setter-nya memeriksa isi sebelum menyimpan: format email, no. HP 9–15 digit, NIK 16 digit, dan luas lahan 0,01–99,99 hektare. Jika aturan dilanggar, setter melempar BusinessException. Setter validasi juga dibuat final supaya subclass tidak bisa melonggarkan aturannya.
 
 ```java
 public abstract class User {
@@ -387,7 +393,7 @@ Pada AGROVA, kedua bentuk ini dipakai. Overriding muncul pada aturan validasi ka
 **1. Overriding**\
 Overriding terjadi ketika subclass menulis ulang method milik superclass dengan nama dan parameter yang sama, biasanya ditandai dengan `@Override` tetapi dengan isi yang berbeda. Saat method dipanggil, Java memilih versi yang sesuai dengan jenis objek sebenarnya.
 
-Pada AGROVA, Subsidi dan NonSubsidi sama-sama menimpa `validasi()` dari `KategoriPenyaluran`. Pupuk subsidi menolak penyaluran yang melebihi kuota, sedangkan nonsubsidi hanya mensyaratkan minimal 1 karung. Oleh karena itu, `Penyaluran.validasiSebelumSimpan()` cukup memanggil `getDetail().validasi(...)` tanpa mengecek jenis pupuknya. Overriding juga dipakai pada `getInfoProfil():` Pengelola dan Petani memanggil versi induk lalu menambahkan data khas masing-masing.
+Pada AGROVA, Subsidi dan NonSubsidi sama-sama menimpa `validasi()` dari `KategoriPenyaluran`. Pupuk subsidi menolak penyaluran yang melebihi kuota, sedangkan nonsubsidi hanya mensyaratkan minimal 1 karung. Oleh karena itu, `Penyaluran.validasiSebelumSimpan()` cukup memanggil `getDetail().validasi(...)` tanpa mengecek jenis pupuknya. Overriding juga dipakai pada `getInfoProfil():` Pengelola, Penyalur, dan Petani memanggil versi induk lalu menambahkan data khas masing-masing.
 
 ```java
 @Override
@@ -408,6 +414,9 @@ public void validasi(int totalKarung) {
 
 ```java
 for (Pupuk p : pupuk) {
+    if (p.getDetail() == null) {
+        throw new BusinessException("Kategori pupuk " + p.getNama() + " belum dilengkapi.");
+    }
     p.getDetail().validasi(p.getKarung());
 }
 ```
@@ -429,6 +438,16 @@ Pada AGROVA, `UserDao` memiliki dua method `cari. cari(int id)` mencari pengguna
 
 ```java
 public User cari(int id) throws SQLException {
+    Map<String, Object> r = Koneksi.one(SEL_PENGELOLA + " WHERE g.id_user = ?", id);
+    if (r != null && !r.isEmpty()) {
+        return pengelola(r);
+    }
+    r = Koneksi.one(SEL_PENYALUR + " WHERE py.id_user = ?", id);
+    if (r != null && !r.isEmpty()) {
+        return penyalur(r);
+    }
+    r = Koneksi.one(SEL_PETANI + " WHERE pt.id_user = ?", id);
+    return r == null || r.isEmpty() ? null : petani(r);
 }
 
 public User cari(String email) throws SQLException {
@@ -440,7 +459,7 @@ public User cari(String email) throws SQLException {
 ### ˙🌱 ̟  Abstraction
 Abstraction adalah penyederhanaan program dengan menampilkan hal yang pokok dan menyembunyikan detail pelaksanaannya. Penerapannya memakai abstract class, yang boleh berisi method tanpa isi, dan interface, yang berfungsi sebagai kontrak bagi class lain. Pengguna class cukup tahu apa yang bisa dilakukan, tidak perlu tahu bagaimana caranya.
 
-Pada AGROVA, abstraction diterapkan di tiga tempat. User adalah abstract class yang mewajibkan setiap subclass menentukan perannya lewat `getPeran()`. KategoriPenyaluran adalah abstract class yang hanya menetapkan `getNama()` dan `validasi()` untuk dilengkapi Subsidi dan NonSubsidi. Sementara itu, interface `CrudDao<T>` menjadi kontrak operasi database yang diimplementasikan `PupukDao`, `PenyaluranDao`, dan `KiosDao`, sehingga bagian lain program memakai `findAll`, `insert`, `update`, dan `delete` tanpa tahu isi query SQL-nya.
+Pada AGROVA, abstraction diterapkan di tiga tempat. User adalah abstract class yang mewajibkan setiap subclass menentukan perannya lewat `getPeran()`. KategoriPenyaluran adalah abstract class yang hanya menetapkan `getNama()` dan `validasi()` untuk dilengkapi Subsidi dan NonSubsidi. Sementara itu, interface `CrudDao<T>` menjadi kontrak operasi database yang diimplementasikan `PupukDao`, `PenyaluranDao`, dan `KiosDao`, sehingga bagian lain program memakai `findAll`, `insert`, `update`, dan `delete` tanpa tahu apakah datanya diambil lewat SQL (JDBC) atau lewat ORM (`KiosDao`).
 
 ```java
 public abstract Role getPeran();   
@@ -468,15 +487,15 @@ public interface CrudDao<T> {
 ### ˙🌱 ̟  JDBC (Java Database Connectivity)
 JDBC adalah API standar Java untuk menghubungkan program dengan database relasional. Lewat JDBC, program membuka koneksi, mengirim perintah SQL, lalu membaca hasilnya sebagai data Java. Agar aman dari SQL Injection, perintah SQL sebaiknya dijalankan dengan `PreparedStatement`, yaitu SQL yang nilainya diisi terpisah lewat tanda `?`.
 
-Pada AGROVA, JDBC menjadi jalur utama akses data. Class `Koneksi` membuka koneksi ke database agrova dengan driver MySQL Connector/J dan menyediakan helper `query`, `one`, `insert`, dan update yang semuanya memakai `PreparedStatement`. Alamat, user, dan sandi database dapat diganti lewat environment variable tanpa mengubah kode. Untuk proses yang melibatkan banyak langkah, `Koneksi.tx()` menjalankan transaksi dengan commit otomatis, dan rollback jika terjadi kesalahan. Seluruh query diletakkan di class `DAO`, sehingga bagian lain program tidak perlu mengetahui isi SQL-nya.
+Pada AGROVA, JDBC menjadi jalur utama akses data. Class `Koneksi` membuka koneksi ke database agrova dengan driver MySQL Connector/J dan menyediakan helper `query`, `one`, `insert`, dan `update` yang semuanya memakai `PreparedStatement`. Alamat, user, dan sandi database dapat diganti lewat environment variable tanpa mengubah kode. Untuk proses yang melibatkan banyak langkah, `Koneksi.tx()` menjalankan transaksi dengan commit otomatis, dan rollback jika terjadi kesalahan. Sebagian besar query diletakkan di class DAO (`UserDao`, `PupukDao`, `PenyaluranDao`, `LaporanDao`), sedangkan `GuiController` memakai helper `Koneksi` yang sama untuk query yang khusus menampilkan data di GUI.
 
 ```java
 private static final String URL = env("AGROVA_DB_URL", "jdbc:mysql://localhost:3306/agrova");
 private static final String USER = env("AGROVA_DB_USER", "root");
 private static final String PASS = env("AGROVA_DB_PASS", "");
 
-public static List query(String sql, Object... params) throws SQLException {
-    List list = new ArrayList();
+public static List<Map<String, Object>> query(String sql, Object... params) throws SQLException {
+    List<Map<String, Object>> list = new ArrayList<>();
     Connection c = getConnection();
     try (PreparedStatement ps = c.prepareStatement(sql)) {
         for (int i = 0; i < params.length; i++) {
@@ -492,6 +511,7 @@ public static List query(String sql, Object... params) throws SQLException {
 ```java
 public static void tx(Work work) throws SQLException {
     Connection c = getConnection();
+    boolean oldAutoCommit = c.getAutoCommit();
     try {
         c.setAutoCommit(false);
         work.run();
@@ -499,23 +519,29 @@ public static void tx(Work work) throws SQLException {
     } catch (SQLException e) {
         c.rollback();
         throw e;
+    } finally {
+        c.setAutoCommit(oldAutoCommit);
     }
 }
 ```
 
 ```java
 @Override
-public long insert(Kios k) throws SQLException {
-    return Koneksi.insert("INSERT INTO kios (nama_kios, nama_kecamatan) VALUES (?, ?)",
-            k.getNamaKios(), k.getNamaKecamatan());
+public long insert(Pupuk p) throws SQLException {
+    return Koneksi.insert("INSERT INTO pupuk (nama_pupuk, kategori_pupuk, satuan, stok_pupuk, deskripsi, penyaluran_id_penyaluran) "
+            + "VALUES (?,?,?,?,?,?)",
+            p.getNama(), p.getKategori(), p.getSatuan(), p.getStok(), p.getDeskripsi(), p.getIdPenyaluran());
 }
 ```
 
 ### ˙🌱 ̟  ORM (Object Relational Mapping)
-ORM adalah teknik yang memetakan class Java ke tabel database, sehingga data dapat dikelola sebagai objek tanpa menulis SQL manual. Pada AGROVA, ORM disiapkan dengan Hibernate 7.4.5.Final. Konfigurasi koneksi ada di `persistence.xml` (persistence unit perusahaanRootPU), lalu `EntityManagerProvider` membuat `EntityManagerFactory` dan menyediakan `EntityManager`. Pada versi ini, ORM dipakai untuk menguji koneksi lewat `TestKoneksiOrm`, sedangkan pengelolaan data utama (CRUD) memakai JDBC dan DAO. Class model belum dipetakan sebagai entity, sehingga `persistence.xml` memakai `exclude-unlisted-classes`.
+ORM adalah teknik yang memetakan class Java ke tabel database, sehingga data dapat dikelola sebagai objek tanpa menulis SQL manual.
 
-```java
+Pada AGROVA, ORM memakai Hibernate 7.4.5.Final. Konfigurasi koneksi ada di `persistence.xml` (persistence unit perusahaanRootPU), lalu `EntityManagerProvider` membuat `EntityManagerFactory` dan menyediakan `EntityManager`. Class `Kios` sudah dipetakan sebagai entity ke tabel `kios` dengan anotasi JPA (`@Entity`, `@Table`, `@Id`, `@Column`), dan didaftarkan di `persistence.xml`. `KiosDao` mengelola data kios (`findAll`, `findById`, `insert`, `update`, `delete`) lewat `EntityManager`, termasuk saat penyalur mendaftar dengan kios baru. Sementara itu, data lainnya tetap memakai JDBC dan DAO. Koneksi ORM dapat diuji lewat `TestKoneksiOrm`.
+
+```xml
 <persistence-unit name="perusahaanRootPU" transaction-type="RESOURCE_LOCAL">
+    <class>model.Kios</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
         <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
@@ -526,14 +552,37 @@ ORM adalah teknik yang memetakan class Java ke tabel database, sehingga data dap
 ```
 
 ```java
-private static final EntityManagerFactory emf;
+@Entity
+@Table(name = "kios")
+public class Kios {
 
-static {
-    emf = Persistence.createEntityManagerFactory("perusahaanRootPU");
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_kios")
+    private int id;
+
+    @Column(name = "nama_kios", nullable = false, length = 100)
+    private String namaKios;
+
+    @Column(name = "nama_kecamatan", nullable = false, length = 100)
+    private String namaKecamatan;
+}
+```
+
+```java
+@Override
+public List<Kios> findAll() {
+    try (EntityManager em = EntityManagerProvider.getEntityManager()) {
+        return em.createQuery("SELECT k FROM Kios k ORDER BY k.id", Kios.class)
+                .getResultList();
+    }
 }
 
-public static EntityManager getEntityManager() {
-    return emf.createEntityManager();
+@Override
+public Kios findById(int id) {
+    try (EntityManager em = EntityManagerProvider.getEntityManager()) {
+        return em.find(Kios.class, id);
+    }
 }
 ```
 
@@ -547,16 +596,43 @@ try (EntityManager em = EntityManagerProvider.getEntityManager()) {
 ### ˙🌱 ̟  Singleton
 Singleton adalah pola desain yang menjamin sebuah class hanya punya satu instance (atau satu keadaan bersama) yang dipakai oleh seluruh program. Pola ini berguna untuk sumber daya yang mahal atau harus seragam, seperti koneksi database atau data sesi, karena mencegah pembuatan objek berulang dan data yang tidak sinkron.
 
-Pada AGROVA, prinsip ini diterapkan dalam bentuk static singleton di tiga tempat. `Koneksi` menyimpan satu `Connection` statis yang dipakai ulang oleh semua DAO dan hanya dibuat ulang jika koneksinya terputus. `EntityManagerProvider` membuat satu `EntityManagerFactory` sekali saja saat class pertama kali dimuat. `Session` menyimpan satu pengguna yang sedang login untuk seluruh aplikasi, constructor-nya `private` sehingga class ini tidak bisa diinstansiasi, dan semua akses lewat method statis.
+Pada AGROVA, pola ini diterapkan di tiga tempat. `Koneksi` memiliki satu instance statis dengan constructor `private` dan `getInstance()`. Instance ini menyimpan satu `Connection` yang dipakai ulang oleh semua DAO, dan koneksi hanya dibuat ulang jika terputus. `EntityManagerProvider` juga berpola Singleton dengan constructor `private`, dan satu `EntityManagerFactory` yang dibuat saat pertama kali dibutuhkan lalu dipakai bersama. `Session` menyimpan satu pengguna yang sedang login untuk seluruh aplikasi, constructor-nya `private` sehingga class ini tidak bisa diinstansiasi, dan semua akses lewat method statis.
 
 ```java
-private static Connection conn = null;
+private static final Koneksi INSTANCE = new Koneksi();
+private Connection conn;
 
-public static Connection getConnection() throws SQLException {
-    if (conn == null || conn.isClosed() || !conn.isValid(2)) {
-        conn = DriverManager.getConnection(URL, USER, PASS);
+private Koneksi() {
+}
+
+public static Koneksi getInstance() {
+    return INSTANCE;
+}
+
+public static synchronized Connection getConnection() throws SQLException {
+    if (INSTANCE.conn == null || INSTANCE.conn.isClosed() || !INSTANCE.conn.isValid(2)) {
+        INSTANCE.conn = DriverManager.getConnection(URL, USER, PASS);
     }
-    return conn;
+    return INSTANCE.conn;
+}
+```
+
+```java
+private static final EntityManagerProvider INSTANCE = new EntityManagerProvider();
+private EntityManagerFactory emf;
+
+private EntityManagerProvider() {
+}
+
+private synchronized EntityManagerFactory factory() {
+    if (emf == null || !emf.isOpen()) {
+        emf = Persistence.createEntityManagerFactory("perusahaanRootPU");
+    }
+    return emf;
+}
+
+public static EntityManager getEntityManager() {
+    return INSTANCE.factory().createEntityManager();
 }
 ```
 
