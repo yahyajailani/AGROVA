@@ -175,7 +175,7 @@ Berikut ini ialah gambar ERD Relational yang telah dibuat dalam pembuatan AGROVA
 
 ## ── ⟡ Struktur Folder/Package
 
-Aplikasi menerapkan **MVC** dengan lapisan **DAO** untuk akses database.
+AGROVA dirancang dengan menggunakan pola MVC (Model-View-Controller) dan DAO (Data Access Object) agar pemisahan tugas antar-bagian menjadi lebih jelas. Tampilan antarmuka, proses bisnis, data, dan koneksi database dipisah secara terstruktur agar kode menjadi lebih rapi, serta mudah untuk dikelola dan dikembangkan ke depannya.
 
 ```
 AGROVA/
