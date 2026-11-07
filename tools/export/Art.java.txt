@@ -1,0 +1,98 @@
+package agrova.util;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.geom.Path2D;
+import java.awt.image.BufferedImage;
+import java.io.InputStream;
+
+/** Lanskap sawah berteras. Memakai foto /images/login_bg.jpg bila ada; jika tidak, digambar dengan Java2D. */
+public final class Art {
+    private static BufferedImage photo;
+    private static boolean tried;
+
+    private Art() {
+    }
+
+    private static BufferedImage photo() {
+        if (!tried) {
+            tried = true;
+            try (InputStream in = Art.class.getResourceAsStream("/images/login_bg.jpg")) {
+                if (in != null) photo = ImageIO.read(in);
+            } catch (Exception ignored) {
+            }
+        }
+        return photo;
+    }
+
+    /** Menggambar mengisi area (cover). focusX/focusY 0..1 menentukan bagian yang dipertahankan. */
+    public static void paint(Graphics2D g0, int x, int y, int w, int h, double focusX) {
+        Graphics2D g = (Graphics2D) g0.create(x, y, w, h);
+        Theme.aa(g);
+        BufferedImage p = photo();
+        if (p != null) {
+            double s = Math.max((double) w / p.getWidth(), (double) h / p.getHeight());
+            int iw = (int) (p.getWidth() * s), ih = (int) (p.getHeight() * s);
+            g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+            g.drawImage(p, (int) ((w - iw) * focusX), (h - ih) / 2, iw, ih, null);
+            g.dispose();
+            return;
+        }
+        g.setPaint(new GradientPaint(0, 0, new Color(0xF3C969), 0, h * 0.55f, new Color(0x9DB8A0)));
+        g.fillRect(0, 0, w, h);
+        g.setColor(new Color(255, 245, 205, 190));
+        g.fillOval((int) (w * 0.58), (int) (h * 0.06), (int) (h * 0.2), (int) (h * 0.2));
+        hill(g, w, h, 0.38, 0.10, new Color(0x7FA48F), 1.2);
+        hill(g, w, h, 0.46, 0.12, new Color(0x4F8A74), 2.3);
+        hill(g, w, h, 0.55, 0.09, new Color(0x2E6B55), 0.4);
+        Color[] bands = {new Color(0xA7C46A), new Color(0x8DB45B), new Color(0x74A24E), new Color(0x5E9144), new Color(0x4C8039), new Color(0x3F6F32)};
+        for (int i = 0; i < bands.length; i++) {
+            double top = 0.60 + i * 0.075;
+            Path2D.Double b = new Path2D.Double();
+            b.moveTo(0, h);
+            b.lineTo(0, h * top + 12);
+            for (int k = 0; k <= 24; k++) {
+                double xx = w * k / 24.0;
+                b.lineTo(xx, h * top + Math.sin(k * 0.55 + i * 1.7) * h * 0.022);
+            }
+            b.lineTo(w, h);
+            b.closePath();
+            g.setColor(bands[i]);
+            g.fill(b);
+            g.setColor(new Color(255, 255, 255, 40));
+            g.setStroke(new BasicStroke(1.4f));
+            g.draw(b);
+        }
+        // pondok kecil
+        int hx = (int) (w * 0.74), hy = (int) (h * 0.64);
+        g.setColor(new Color(0x7B4A2B));
+        g.fillRect(hx, hy, 46, 30);
+        g.setColor(new Color(0x4F2E1A));
+        g.fillPolygon(new int[]{hx - 8, hx + 23, hx + 54}, new int[]{hy, hy - 20, hy}, 3);
+        g.setColor(new Color(0xF0C860));
+        g.fillRect(hx + 8, hy + 8, 10, 10);
+        // pohon kelapa
+        g.setColor(new Color(0x1E3B2C));
+        g.setStroke(new BasicStroke(4f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+        int px = (int) (w * 0.92);
+        g.drawLine(px, h, px - 6, (int) (h * 0.46));
+        for (int a = -70; a <= 70; a += 28) {
+            double r = Math.toRadians(a);
+            g.drawLine(px - 6, (int) (h * 0.46), px - 6 + (int) (Math.sin(r) * 48), (int) (h * 0.46) + 24 - (int) (Math.cos(r) * 18));
+        }
+        g.dispose();
+    }
+
+    private static void hill(Graphics2D g, int w, int h, double base, double amp, Color c, double ph) {
+        Path2D.Double p = new Path2D.Double();
+        p.moveTo(0, h);
+        for (int k = 0; k <= 30; k++) {
+            double xx = w * k / 30.0;
+            p.lineTo(xx, h * base - Math.abs(Math.sin(k * 0.21 + ph)) * h * amp);
+        }
+        p.lineTo(w, h);
+        p.closePath();
+        g.setColor(c);
+        g.fill(p);
+    }
+}
