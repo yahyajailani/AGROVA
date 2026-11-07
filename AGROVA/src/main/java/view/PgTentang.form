@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor"><Dimension value="[1180, 700]"/></Property>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="e7" green="f1" red="f6" type="rgb"/></Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-68,0,0,4,-100"/>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="scrBodyTentang">
+      <Properties><Property name="horizontalScrollBarPolicy" type="int" value="31"/></Properties>
+      <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pnlPageTentang">
+          <Properties><Property name="opaque" type="boolean" value="true"/><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="e7" green="f1" red="f6" type="rgb"/></Property></Properties>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="pnlBodyTentang">
+              <Properties><Property name="opaque" type="boolean" value="false"/><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="0" left="40" right="40" top="0"/></Border></Property></Properties>
+              <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="North"/></Constraint></Constraints>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"><Property name="axis" type="int" value="3"/></Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblTitleTentang">
+                  <Properties><Property name="text" type="java.lang.String" value="Tentang Kami"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="26" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="22" green="2a" red="1d" type="rgb"/></Property><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="4" left="0" right="0" top="26"/></Border></Property></Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblSubTentang">
+                  <Properties><Property name="text" type="java.lang.String" value="Perusahaan Root dan sistem AGROVA: distribusi pupuk yang tercatat, tepat sasaran, dan berkelanjutan."/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Segoe UI" size="13" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="73" green="7f" red="7a" type="rgb"/></Property><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="14" left="0" right="0" top="0"/></Border></Property></Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="pnlTintSiapa">
+                  <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="e7" green="f2" red="e2" type="rgb"/></Property><Property name="opaque" type="boolean" value="true"/><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo"><LineBorder><Color PropertyName="color" blue="c3" green="ce" red="be" type="rgb"/></LineBorder></Border></Property></Properties>
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="pnlIsiSiapa">
+                      <Properties><Property name="opaque" type="boolean" value="false"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="8" right="8" top="6"/></Border></Property></Properties>
+                      <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"><Property name="horizontalGap" type="int" value="16"/></Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="pnlTeksSiapa">
+                          <Properties><Property name="opaque" type="boolean" value="false"/></Properties>
+                          <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"><Property name="axis" type="int" value="3"/></Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="lblWarnaJudulBesarSiapa">
+                              <Properties><Property name="text" type="java.lang.String" value="Siapa kami"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="24" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="3a" green="4d" red="1f" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="0" right="0" top="0"/></Border></Property></Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lblWarnaIsiBesarSiapa">
+                              <Properties><Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;width:540px;line-height:1.5&quot;&gt;Perusahaan Root adalah perusahaan distribusi pupuk yang berpusat di Samarinda, Kalimantan Timur. Kami menghubungkan gudang pusat, kios penyalur di tiap kecamatan, dan petani dalam satu alur yang tercatat. AGROVA adalah sistem yang kami kembangkan untuk mencatat penyaluran pupuk subsidi maupun nonsubsidi, mengatur kuota petani berdasarkan golongan, dan memudahkan pemantauan stok di kios.&lt;br&gt;&lt;br&gt;Dengan pencatatan yang rapi dan transparan, kami ingin pupuk sampai ke tangan petani yang berhak, dalam jumlah yang tepat, dan pada waktu yang tepat, dari gudang pusat hingga kios di setiap kecamatan.&lt;/div&gt;"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Segoe UI" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="4c" green="56" red="50" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/></Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JLabel" name="lblGbrSiapa">
+                          <Properties><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/images/tentang/pabrik.jpg"/></Property><Property name="verticalAlignment" type="int" value="1"/></Properties>
+                          <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="East"/></Constraint></Constraints>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="lblWarnaHeadSdg">
+                  <Properties><Property name="text" type="java.lang.String" value="Fokus pada tujuan pembangunan berkelanjutan (SDGs)"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="3a" green="4d" red="1f" type="rgb"/></Property><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="10" left="0" right="0" top="26"/></Border></Property></Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="pnlGridSdg">
+                  <Properties><Property name="opaque" type="boolean" value="false"/><Property name="alignmentX" type="float" value="0.0"/><Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor"><Dimension value="[4000, 210]"/></Property></Properties>
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout"><Property name="columns" type="int" value="2"/><Property name="horizontalGap" type="int" value="14"/><Property name="rows" type="int" value="0"/><Property name="verticalGap" type="int" value="14"/></Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="pnlTintSdg12">
+                      <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="d0" green="ee" red="fa" type="rgb"/></Property><Property name="opaque" type="boolean" value="true"/><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo"><LineBorder><Color PropertyName="color" blue="b0" green="ca" red="d2" type="rgb"/></LineBorder></Border></Property></Properties>
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="pnlIsiSdg12">
+                          <Properties><Property name="opaque" type="boolean" value="false"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="8" right="8" top="6"/></Border></Property></Properties>
+                          <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"><Property name="horizontalGap" type="int" value="16"/></Layout>
+                          <SubComponents>
+                            <Container class="javax.swing.JPanel" name="pnlTeksSdg12">
+                              <Properties><Property name="opaque" type="boolean" value="false"/></Properties>
+                              <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"><Property name="axis" type="int" value="3"/></Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="lblWarnaJudulSdg12">
+                                  <Properties><Property name="text" type="java.lang.String" value="SDG 12 &#xb7; Konsumsi dan produksi bertanggung jawab"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="10" green="62" red="8b" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="0" right="0" top="0"/></Border></Property></Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="lblWarnaIsiSdg12">
+                                  <Properties><Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;width:300px;line-height:1.5&quot;&gt;Kuota per golongan petani dan pencatatan stok mencegah penyaluran berlebih dan pupuk terbuang, serta mendorong penggunaan pupuk sesuai takaran.&lt;/div&gt;"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Segoe UI" size="13" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="4c" green="56" red="50" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/></Properties>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Component class="javax.swing.JLabel" name="lblGbrSdg12">
+                              <Properties><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/images/tentang/sdg12.png"/></Property><Property name="verticalAlignment" type="int" value="1"/></Properties>
+                              <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="West"/></Constraint></Constraints>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="pnlTintSdg8">
+                      <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="e9" green="e2" red="f8" type="rgb"/></Property><Property name="opaque" type="boolean" value="true"/><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo"><LineBorder><Color PropertyName="color" blue="c5" green="c0" red="d0" type="rgb"/></LineBorder></Border></Property></Properties>
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="pnlIsiSdg8">
+                          <Properties><Property name="opaque" type="boolean" value="false"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="8" right="8" top="6"/></Border></Property></Properties>
+                          <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"><Property name="horizontalGap" type="int" value="16"/></Layout>
+                          <SubComponents>
+                            <Container class="javax.swing.JPanel" name="pnlTeksSdg8">
+                              <Properties><Property name="opaque" type="boolean" value="false"/></Properties>
+                              <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"><Property name="axis" type="int" value="3"/></Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="lblWarnaJudulSdg8">
+                                  <Properties><Property name="text" type="java.lang.String" value="SDG 8 &#xb7; Pekerjaan layak dan pertumbuhan ekonomi"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="42" green="19" red="91" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="0" right="0" top="0"/></Border></Property></Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="lblWarnaIsiSdg8">
+                                  <Properties><Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;width:300px;line-height:1.5&quot;&gt;Distribusi yang tercatat dan tepat sasaran membantu petani menjaga hasil panen dan pendapatannya, sekaligus menggerakkan usaha kios penyalur di tiap kecamatan.&lt;/div&gt;"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Segoe UI" size="13" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="4c" green="56" red="50" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/></Properties>
+                                </Component>
+                              </SubComponents>
+                            </Container>
+                            <Component class="javax.swing.JLabel" name="lblGbrSdg8">
+                              <Properties><Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor"><Image iconType="3" name="/images/tentang/sdg8.png"/></Property><Property name="verticalAlignment" type="int" value="1"/></Properties>
+                              <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="West"/></Constraint></Constraints>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="lblWarnaHeadCara">
+                  <Properties><Property name="text" type="java.lang.String" value="Cara kerja distribusi"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="8c" green="54" red="1e" type="rgb"/></Property><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="10" left="0" right="0" top="26"/></Border></Property></Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="pnlTintCara">
+                  <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="fa" green="ee" red="e0" type="rgb"/></Property><Property name="opaque" type="boolean" value="true"/><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo"><LineBorder><Color PropertyName="color" blue="d3" green="ca" red="bc" type="rgb"/></LineBorder></Border></Property></Properties>
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="pnlIsiCara">
+                      <Properties><Property name="opaque" type="boolean" value="false"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="8" right="8" top="6"/></Border></Property></Properties>
+                      <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"><Property name="horizontalGap" type="int" value="16"/></Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="pnlTeksCara">
+                          <Properties><Property name="opaque" type="boolean" value="false"/></Properties>
+                          <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"><Property name="axis" type="int" value="3"/></Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="lblWarnaJudulCara">
+                              <Properties><Property name="text" type="java.lang.String" value="Dari gudang sampai ke petani"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="8c" green="54" red="1e" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="0" right="0" top="0"/></Border></Property></Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lblWarnaIsiCara">
+                              <Properties><Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;width:740px;line-height:1.5&quot;&gt;1. Pengelola mencatat penyaluran dari gudang pusat ke kios di kecamatan tujuan.&lt;br&gt;2. Penyalur kios mengonfirmasi penerimaan, lalu stok kios bertambah.&lt;br&gt;3. Petani memesan atau penyalur menyalurkan langsung sesuai hak dan kuota petani.&lt;br&gt;4. Setiap transaksi tercatat dan nota dapat dicetak oleh penyalur.&lt;/div&gt;"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Segoe UI" size="13" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="4c" green="56" red="50" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/></Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="lblWarnaHeadKuota">
+                  <Properties><Property name="text" type="java.lang.String" value="Kuota subsidi per golongan"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="14" green="54" red="a8" type="rgb"/></Property><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="10" left="0" right="0" top="26"/></Border></Property></Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="pnlTintKuota">
+                  <Properties><Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="d8" green="e9" red="fd" type="rgb"/></Property><Property name="opaque" type="boolean" value="true"/><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo"><LineBorder><Color PropertyName="color" blue="b7" green="c6" red="d4" type="rgb"/></LineBorder></Border></Property></Properties>
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="pnlIsiKuota">
+                      <Properties><Property name="opaque" type="boolean" value="false"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="8" right="8" top="6"/></Border></Property></Properties>
+                      <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"><Property name="horizontalGap" type="int" value="16"/></Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="pnlTeksKuota">
+                          <Properties><Property name="opaque" type="boolean" value="false"/></Properties>
+                          <Constraints><Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription"><BorderConstraints direction="Center"/></Constraint></Constraints>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"><Property name="axis" type="int" value="3"/></Layout>
+                          <SubComponents>
+                            <Component class="javax.swing.JLabel" name="lblWarnaJudulKuota">
+                              <Properties><Property name="text" type="java.lang.String" value="Siapa yang berhak dan berapa jatahnya"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Georgia" size="17" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="14" green="54" red="a8" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="6" left="0" right="0" top="0"/></Border></Property></Properties>
+                            </Component>
+                            <Component class="javax.swing.JLabel" name="lblWarnaIsiKuota">
+                              <Properties><Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;div style=&quot;width:740px;line-height:1.5&quot;&gt;Hak subsidi ditentukan oleh golongan petani. Golongan C mendapat kuota subsidi 300 kg, Golongan B 150 kg, dan Golongan A tidak menerima subsidi sehingga hanya melihat dan membeli pupuk nonsubsidi.&lt;/div&gt;"/><Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor"><Font name="Segoe UI" size="13" style="0"/></Property><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="4c" green="56" red="50" type="rgb"/></Property><Property name="alignmentX" type="float" value="0.0"/></Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="lblHintFootT">
+                  <Properties><Property name="text" type="java.lang.String" value="&#xa9; 2026 AGROVA &#x2014; Perusahaan Root, Samarinda"/><Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor"><Color blue="73" green="7f" red="7a" type="rgb"/></Property><Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor"><Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo"><EmptyBorder bottom="20" left="0" right="0" top="26"/></Border></Property></Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
