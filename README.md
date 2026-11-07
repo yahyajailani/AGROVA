@@ -393,7 +393,7 @@ Polymorphism berarti satu nama method dapat berperilaku berbeda tergantung konte
 
 Pada AGROVA, kedua bentuk ini dipakai. Overriding muncul pada aturan validasi kategori pupuk (Subsidi dan NonSubsidi) serta pada `getInfoProfil()` milik tiap peran pengguna. Sedangkan, overloading muncul pada `UserDao.cari()` yang bisa mencari pengguna berdasarkan id maupun email.
 
-* **Overriding**\
+**1. Overriding**\
 Overriding terjadi ketika subclass menulis ulang method milik superclass dengan nama dan parameter yang sama, biasanya ditandai dengan `@Override` tetapi dengan isi yang berbeda. Saat method dipanggil, Java memilih versi yang sesuai dengan jenis objek sebenarnya.
 
 Pada AGROVA, Subsidi dan NonSubsidi sama-sama menimpa `validasi()` dari `KategoriPenyaluran`. Pupuk subsidi menolak penyaluran yang melebihi kuota, sedangkan nonsubsidi hanya mensyaratkan minimal 1 karung. Oleh karena itu, `Penyaluran.validasiSebelumSimpan()` cukup memanggil `getDetail().validasi(...)` tanpa mengecek jenis pupuknya. Overriding juga dipakai pada `getInfoProfil():` Pengelola dan Petani memanggil versi induk lalu menambahkan data khas masing-masing.
@@ -431,7 +431,7 @@ public Map<String, Object> getInfoProfil() {
 }
 ```
 
-* **Overloading**\
+**2. Overloading**\
 Overloading adalah penulisan beberapa method dengan nama yang sama dalam satu class, tetapi dengan jumlah atau tipe parameter yang berbeda. Java memilih method yang tepat saat kompilasi berdasarkan argumen yang diberikan.
 
 Pada AGROVA, `UserDao` memiliki dua method `cari. cari(int id)` mencari pengguna berdasarkan id dengan memeriksa tabel pengelola, penyalur, lalu petani. `cari(String email)` mencari berdasarkan email, kemudian meneruskan hasilnya ke `cari(int id)`. Pemanggil cukup menulis `cari(...)` dan sistem memilih versi yang cocok dengan data yang dimiliki.
