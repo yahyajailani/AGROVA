@@ -180,26 +180,77 @@ Aplikasi menerapkan **MVC** dengan lapisan **DAO** untuk akses database.
 ```
 AGROVA/
 ├── database/
-│   └── perusahaan_root.sql        # skema + data awal
+│   └── perusahaan_root.sql
 ├── src/main/
 │   ├── java/
-│   │   ├── config/                # Koneksi (JDBC), EntityManagerProvider (JPA), TestKoneksi*
-│   │   ├── controller/            # GuiController, AuthController, Session, Kelola, RoleController,
-│   │   │                          # PengelolaController, PenyalurController, PetaniController, ...
+│   │   ├── config/
+│   │   │   ├── DatabaseConfig.java
+│   │   │   ├── EntityManagerProvider.java
+│   │   │   ├── Koneksi.java
+│   │   │   └── TestKoneksiOrm.java
+│   │   ├── controller/
+│   │   │   ├── AuthController.java
+│   │   │   ├── GuiController.java
+│   │   │   ├── KelolaController.java
+│   │   │   ├── PengelolaController.java
+│   │   │   ├── PenyalurController.java
+│   │   │   ├── PetaniController.java
+│   │   │   ├── PupukController.java
+│   │   │   ├── PenyaluranController.java
+│   │   │   ├── KiosController.java
+│   │   │   └── RoleController.java
 │   │   ├── main/
-│   │   │   └── Main.java          # titik masuk program
-│   │   ├── model/                 # User, Pengelola, Penyalur, Petani, Pupuk, Penyaluran,
-│   │   │   │                      # KategoriPenyaluran, Subsidi, NonSubsidi, Kios, Role, Security, ...
-│   │   │   └── dao/               # CrudDao, UserDao, PupukDao, PenyaluranDao, KiosDao, LaporanDao
-│   │   └── view/                  # frmBeranda, frmLogin, frmDaftar, frmPengelola, frmPenyalur, frmPetani,
-│   │       │                      # halaman Pg*, dialog dlg*, PdfReport, ...
-│   │       └── util/              # Theme, Styler, Validasi, TableKit, Charts, Nav, Dialogs, ...
+│   │   │   └── Main.java
+│   │   ├── model/
+│   │   │   ├── User.java
+│   │   │   ├── Pengelola.java
+│   │   │   ├── Penyalur.java
+│   │   │   ├── Petani.java
+│   │   │   ├── Pupuk.java
+│   │   │   ├── Penyaluran.java
+│   │   │   ├── Kios.java
+│   │   │   ├── Subsidi.java
+│   │   │   ├── NonSubsidi.java
+│   │   │   ├── KategoriPenyaluran.java
+│   │   │   ├── Role.java
+│   │   │   └── Security.java
+│   │   ├── dao/
+│   │   │   ├── CrudDao.java
+│   │   │   ├── UserDao.java
+│   │   │   ├── PupukDao.java
+│   │   │   ├── PenyaluranDao.java
+│   │   │   ├── KiosDao.java
+│   │   │   └── LaporanDao.java
+│   │   └── view/
+│   │       ├── BerandaView.java
+│   │       ├── LoginView.java
+│   │       ├── DaftarView.java
+│   │       ├── PengelolaView.java
+│   │       ├── PenyalurView.java
+│   │       ├── PetaniView.java
+│   │       ├── LaporanView.java
+│   │       ├── dialog/
+│   │       │   ├── KonfirmasiDialog.java
+│   │       │   ├── InputPupukDialog.java
+│   │       │   └── DetailPenyaluranDialog.java
+│   │       └── util/
+│   │           ├── Charts.java
+│   │           ├── Dialogs.java
+│   │           ├── Nav.java
+│   │           ├── Styler.java
+│   │           ├── TableKit.java
+│   │           ├── Theme.java
+│   │           └── Validasi.java
 │   └── resources/
-│       ├── META-INF/persistence.xml
-│       └── images/                # logo, hero, gambar pupuk, gambar SDGs
-├── tools/                         # skrip bantu pembuatan form GUI
-├── laporan/                       # contoh keluaran PDF
-└── pom.xml
+│       ├── META-INF/
+│       │   └── persistence.xml
+│       └── images/
+│           ├── logo.png
+│           ├── hero.png
+│           └── sdgs.png
+├── tools/
+└── laporan/
+    └── RekapPenyaluran.pdf
 ```
 
 | Package | Peran |
